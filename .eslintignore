@@ -1,0 +1,8 @@
+docs
+dist
+node_modules
+.vscode
+.idea
+coverage
+lib
+*.DS_Store
