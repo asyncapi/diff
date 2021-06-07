@@ -7,11 +7,11 @@
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\"",
     "lint": "eslint --max-warnings 0 --config .eslintrc .",
     "get:version": "echo $npm_package_version",
     "get:name": "echo $npm_package_name",
-    "generate:assets": "echo \"Skip generation\"",
+    "generate:assets": "npm run build",
     "bump:version": "npm --no-git-tag-version --allow-same-version version $VERSION"
   },
   "repository": {
@@ -19,11 +19,11 @@
     "url": "git+https://github.com/asyncapi/diff.git"
   },
   "keywords": [
-    "diff",
-    "asyncapi"
+    "asyncapi",
+    "diff"
   ],
   "author": "aayushmau5",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/asyncapi/diff/issues"
   },
