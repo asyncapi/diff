@@ -7,9 +7,6 @@ import { resolve } from 'path';
  * @returns {Boolean} Whether the given path is URL or not
  */
 export function isUrl(path: string): boolean {
-  // handled cases: path that starts with http/https
-  // unhandled cases: ex. www.samerandomwebsite.com
-
   return path.startsWith('http');
 }
 

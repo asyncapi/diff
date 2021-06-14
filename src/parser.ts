@@ -2,8 +2,8 @@ import { AsyncAPIDocument, parse, parseFromUrl } from '@asyncapi/parser';
 import { isUrl, readDocument } from './utils';
 
 export interface ParsedOutput {
-  parsedDocument1: AsyncAPIDocument;
-  parsedDocument2: AsyncAPIDocument;
+  firstDocument: AsyncAPIDocument;
+  secondDocument: AsyncAPIDocument;
 }
 
 /**
@@ -16,9 +16,9 @@ export async function parser(
   firstPath: string,
   secondPath: string
 ): Promise<ParsedOutput> {
-  const parsedDocument1 = await parseDocument(firstPath);
-  const parsedDocument2 = await parseDocument(secondPath);
-  return { parsedDocument1, parsedDocument2 };
+  const firstDocument = await parseDocument(firstPath);
+  const secondDocument = await parseDocument(secondPath);
+  return { firstDocument, secondDocument };
 }
 
 /**
@@ -26,13 +26,10 @@ export async function parser(
  * @param {String} path Path to document
  * @returns {Promise<AsyncAPIDocument>} The parsed AsyncAPI document
  */
-async function parseDocument(path: string) {
-  let parsedDocument;
+function parseDocument(path: string) {
   if (isUrl(path)) {
-    parsedDocument = await parseFromUrl(path);
-  } else {
-    const document = readDocument(path);
-    parsedDocument = await parse(document);
+    return parseFromUrl(path);
   }
-  return parsedDocument;
+  const document = readDocument(path);
+  return parse(document);
 }
