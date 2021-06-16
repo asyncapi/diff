@@ -16,8 +16,8 @@ export async function parser(
   firstPath: string,
   secondPath: string
 ): Promise<ParsedOutput> {
-  const firstDocument = await parseDocument(firstPath);
-  const secondDocument = await parseDocument(secondPath);
+  const firstDocument = await parseDocument(firstPath),
+    secondDocument = await parseDocument(secondPath);
   return { firstDocument, secondDocument };
 }
 
@@ -30,6 +30,5 @@ function parseDocument(path: string) {
   if (isUrl(path)) {
     return parseFromUrl(path);
   }
-  const document = readDocument(path);
-  return parse(document);
+  return parse(readDocument(path));
 }

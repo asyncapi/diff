@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+import { URL } from 'url';
 
 /**
  * Checks if the argument is URL or not
@@ -7,7 +8,11 @@ import { resolve } from 'path';
  * @returns {Boolean} Whether the given path is URL or not
  */
 export function isUrl(path: string): boolean {
-  return path.startsWith('http');
+  if (path.startsWith('http')) {
+    new URL(path);
+    return true;
+  }
+  return false;
 }
 
 /**
