@@ -8,7 +8,7 @@ describe('Utils', () => {
     expect(() => isUrl('https://')).toThrow('Invalid URL: https://');
   });
 
-  test('readDocument function', () => {
-    expect(readDocument('./test/spec/asyncapi.yml')).toEqual(AsyncAPIDoc);
+  test('readDocument function', async () => {
+    expect(await readDocument('./test/spec/asyncapi.yml')).toEqual(AsyncAPIDoc);
   });
 });

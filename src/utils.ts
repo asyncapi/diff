@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFile } from 'fs/promises';
 import { resolve } from 'path';
 import { URL } from 'url';
 
@@ -18,9 +18,9 @@ export function isUrl(path: string): boolean {
 /**
  * Synchronously reads the entire content of passed document file
  * @param {String} path Path to document
- * @returns {String} The entire content of a file
+ * @returns {Promise<String>} The entire content of a file
  */
-export function readDocument(path: string): string {
+export function readDocument(path: string): Promise<string> {
   const resolvedPath = resolve(path);
-  return readFileSync(resolvedPath, 'utf-8');
+  return readFile(resolvedPath, 'utf-8');
 }

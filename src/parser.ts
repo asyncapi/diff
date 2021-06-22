@@ -26,9 +26,9 @@ export async function parser(
  * @param {String} path Path to document
  * @returns {Promise<AsyncAPIDocument>} The parsed AsyncAPI document
  */
-function parseDocument(path: string) {
+async function parseDocument(path: string) {
   if (isUrl(path)) {
     return parseFromUrl(path);
   }
-  return parse(readDocument(path));
+  return parse(await readDocument(path));
 }
