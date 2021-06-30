@@ -1,0 +1,204 @@
+# AsyncAPI Diff Standard
+
+## The schema
+
+The schema has the following <u>fixed</u> fields:
+
+1. [`asyncapi`](#asyncapi)
+1. [`id`](#id)
+1. [`info`](#info)
+   - `title`
+   - `version`
+   - `description`
+   - `termsOfService`
+   - `contact`
+     - `name`
+     - `url`
+     - `email`
+   - `license`
+     - `name`
+     - `url`
+1. [`servers`](#servers)
+   - patterned-field (name)
+     - `url`
+     - `description`
+     - `protocol`
+     - `protocolVersion`
+     - `variables`
+       - field
+         - `enum`
+         - `default`
+         - `description`
+         - `examples`
+     - `security`
+     - `bindings`
+1. [`channels`](#channels)
+   - patterned-field
+     - `$ref`
+     - `description`
+     - `bindings`
+     - `subscribe`
+       - `operationId`
+       - `summary`
+       - `description`
+       - `tags`
+       - `externalDocs`
+       - `bindings`
+       - `traits`
+       - `message`
+         - `headers`
+           - `$ref`
+           - [SchemaObject](https://www.asyncapi.com/docs/specifications/v2.0.0#schemaObject)
+         - `correlationId`
+           - `$ref`
+           - `description`
+           - `location`
+         - `schemaFormat`
+         - `contentType`
+         - `name`
+         - `title`
+         - `summary`
+         - `tags`
+         - `externalDocs`
+         - `bindings`
+         - `examples`
+         - `traits`
+         - `description`
+         - `payload`
+           - `type`
+           - `properties`
+     - `publish`
+     - `parameters`
+       - patterned-field
+         - `$ref`
+         - `description`
+         - `schema`
+         - `location`
+1. [`components`](#components)
+1. [`tags`](#tags)
+1. [`externalDocs`](#externaldocs)
+
+## The Standard
+
+### `asyncapi`
+
+ex. Version: `major`.`minor`.`patch`
+
+**Breaking:**
+
+1. Change in `major` version
+
+**Non-Breaking:**
+
+1. Change in `minor`/`patch` version
+
+### `id`
+
+Any change in `id` is **Non-Breaking**
+
+### `info`
+
+**Breaking:**
+
+1. Change in `version`
+1. Change in `termsOfService`
+1. Change in `license` field
+
+**Non-Breaking:**
+
+1. Change in `title`
+1. Change in `description`
+1. Change in `contact` field
+
+### `servers`
+
+**Breaking:**
+
+1. Removal of a server(equivalent to change in server name)
+1. Change in `url`
+1. Change in `protocol`
+1. Change in `protocolVersion`
+1. Change in `default` (`variables`)
+1. Removal in `enum` (`variables`)
+1. Change in `security`
+
+**Non-Breaking:**
+
+1. Server being added
+1. Change in `description`
+1. Change in `description` (`variables`)
+1. Change in `examples` (`variables`)
+1. Addition in `enum` (`variables`)
+
+### `channels`
+
+**Breaking:**
+
+1.  Removal of channel
+1.  Removal of `subscribe` or `publish` field
+1.  Change in value of `$ref`
+
+**Non-Breaking:**
+
+1. Change in `description`
+1. Addition of `subscribe` or `publish` field
+
+#### `subscribe` | `publish`
+
+**Breaking:**
+
+1. Change in `operationId`
+1. Change in `traits`
+
+**Non-Breaking:**
+
+1. Change in `summary`
+1. Change in `description`
+1. Change in `externalDocs`
+1. Change in `tags`
+
+##### `message`
+
+**Breaking:**
+
+1. Change in `contentType`
+2. Change in `name`
+3. Change in `payload`
+4. Change in `traits`
+5. Change in `headers`
+
+**Non-Breaking:**
+
+1. Change in `summary`
+1. Change in `description`
+1. Change in `examples`
+1. Change in `title`
+1. Change in `tags`
+1. Change in `externalDocs`
+1. Change in `correlationId`
+
+#### `parameters`
+
+**Breaking:**
+
+1. Change in `schema`
+1. Change in `location`
+1. Change in value of `$ref`
+
+**Non-Breaking:**
+
+1. Change in `description`
+
+### `components`
+
+Any change in `components` is **non-breaking**.
+
+**Reason:** The parser will inline the `$ref` during the parsing phase.
+
+### `tags`
+
+Any change in `tags` is **non-breaking**.
+
+### `externalDocs`
+
+Any change in `externalDocs` is **non-breaking**.
