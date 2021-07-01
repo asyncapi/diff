@@ -6,6 +6,7 @@ The schema has the following <u>fixed</u> fields:
 
 1. [`asyncapi`](#asyncapi)
 1. [`id`](#id)
+1. [`defaultContentType`](#defaultcontenttype)
 1. [`info`](#info)
    - `title`
    - `version`
@@ -32,7 +33,7 @@ The schema has the following <u>fixed</u> fields:
          - `examples`
      - `security`
      - `bindings`
-1. [`channels`](#channels)
+1. [`channels`](#channels) (aka Operations)
    - patterned-field
      - `$ref`
      - `description`
@@ -95,6 +96,10 @@ ex. Version: `major`.`minor`.`patch`
 ### `id`
 
 Any change in `id` is **Non-Breaking**
+
+### `defaultContentType`
+
+Change in `defaultContentType` is **Breaking**
 
 ### `info`
 
