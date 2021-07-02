@@ -79,6 +79,8 @@ The schema has the following <u>fixed</u> fields:
 1. [`tags`](#tags)
 1. [`externalDocs`](#externaldocs)
 
+**NOTE:** At the moment, bindings are out of scope for this library as these are yet not mature enough and lack proper tooling support.Thus, we have considered it as **non-breaking** change for the time being.
+
 ## The Standard
 
 ### `asyncapi`
@@ -145,6 +147,7 @@ Change in `defaultContentType` is **Breaking**
 
 **Non-Breaking:**
 
+1. Addition of a channel
 1. Change in `description`
 1. Addition of `subscribe` or `publish` field
 
@@ -167,10 +170,10 @@ Change in `defaultContentType` is **Breaking**
 **Breaking:**
 
 1. Change in `contentType`
-2. Change in `name`
-3. Change in `payload`
-4. Change in `traits`
-5. Change in `headers`
+1. Change in `name`
+1. Change in `payload`
+1. Change in `traits`
+1. Change in `headers`
 
 **Non-Breaking:**
 
@@ -207,3 +210,63 @@ Any change in `tags` is **non-breaking**.
 ### `externalDocs`
 
 Any change in `externalDocs` is **non-breaking**.
+
+## Summary
+
+### Breaking changes
+
+1. Change in `major` version in `asycnapi`
+1. Change in `defaultContentType` field
+1. Change in `version` in `info`
+1. Change in `termsOfService` in `info`
+1. Change in `license` field in `info`
+1. Removal of a server(equivalent to change in server name)
+1. Change in `url` in `servers`
+1. Change in `protocol` in `servers`
+1. Change in `protocolVersion` in `servers`
+1. Change in `default` (`variables`) in `servers`
+1. Removal in `enum` (`variables`) in `servers`
+1. Change in `security` in `servers`
+1.  Removal of channel
+1.  Removal of `subscribe` or `publish` field in `channels`
+1.  Change in value of `$ref` in `channels`
+1. Change in `operationId` in `subscribe`|`publish`
+1. Change in `traits` in `subscribe`|`publish`
+1. Change in `contentType` in `message`
+1. Change in `name` in `message`
+1. Change in `payload` in `message`
+1. Change in `traits` in `message`
+1. Change in `headers` in `message`
+1. Change in `schema` in `parameters`
+1. Change in `location` in `parameters`
+1. Change in value of `$ref` in `parameters`
+
+### Non-Breaking changes
+
+1. Change in `minor`/`patch` version in `asyncapi`
+1. Change in `id` field
+1. Change in `title` in `info`
+1. Change in `description` in `info`
+1. Change in `contact` in `info`
+1. Server being added
+1. Change in `description` in `servers`
+1. Change in `description` (`variables`) in `servers`
+1. Change in `examples` (`variables`) in `servers`
+1. Addition in `enum` (`variables`) in `servers`
+1. Change in `description` in `channels`
+1. Addition of `subscribe` or `publish` field in `channels`
+1. Change in `summary` in `subscribe`|`publish`
+1. Change in `description` in `subscribe`|`publish`
+1. Change in `externalDocs` in `subscribe`|`publish`
+1. Change in `tags` in `subscribe`|`publish`
+1. Change in `summary` in `message`
+1. Change in `description` in `message`
+1. Change in `examples` in `message`
+1. Change in `title` in `message`
+1. Change in `tags` in `message`
+1. Change in `externalDocs` in `message`
+1. Change in `correlationId` in `message`
+1. Change in `description` in `parameters`
+1. Change in `components`
+1. Change in `tags`
+1. Change in `externalDocs`
