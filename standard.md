@@ -46,7 +46,7 @@ The schema has the following <u>fixed</u> fields:
        - `externalDocs`
        - `bindings`
        - `traits`
-       - `message`
+       - [`message`](#message)
          - `headers`
            - `$ref`
            - [SchemaObject](https://www.asyncapi.com/docs/specifications/v2.0.0#schemaObject)
@@ -66,8 +66,6 @@ The schema has the following <u>fixed</u> fields:
          - `traits`
          - `description`
          - `payload`
-           - `type`
-           - `properties`
      - `publish`
      - `parameters`
        - patterned-field
@@ -79,7 +77,7 @@ The schema has the following <u>fixed</u> fields:
 1. [`tags`](#tags)
 1. [`externalDocs`](#externaldocs)
 
-**NOTE:** At the moment, bindings are out of scope for this library as these are yet not mature enough and lack proper tooling support.Thus, we have considered it as **non-breaking** change for the time being.
+**NOTE:** At the moment, bindings are out of scope for this library as these are yet not mature enough and lack proper tooling support. Thus, we have considered it as **non-breaking** change for the time being.
 
 ## The Standard
 
@@ -141,12 +139,13 @@ Change in `defaultContentType` is **Breaking**
 
 **Breaking:**
 
-1.  Removal of channel
-1.  Removal of `subscribe` or `publish` field
-1.  Change in value of `$ref`
+1. Removal of channel(same as changing the channel name)
+1. Removal of `subscribe` or `publish` field
 
 **Non-Breaking:**
 
+1. Change in value of `$ref`
+     -  During the parsing phase, the `$ref`s will get inlined. So, the change will only depend on the inlined data.
 1. Addition of a channel
 1. Change in `description`
 1. Addition of `subscribe` or `publish` field
@@ -170,20 +169,21 @@ Change in `defaultContentType` is **Breaking**
 **Breaking:**
 
 1. Change in `contentType`
-1. Change in `name`
 1. Change in `payload`
 1. Change in `traits`
 1. Change in `headers`
+1. Change in `location` inside `correlationId`
 
 **Non-Breaking:**
 
+1. Change in `name`
 1. Change in `summary`
 1. Change in `description`
 1. Change in `examples`
 1. Change in `title`
 1. Change in `tags`
 1. Change in `externalDocs`
-1. Change in `correlationId`
+1. Change `description` in `correlationId`
 
 #### `parameters`
 
@@ -191,10 +191,10 @@ Change in `defaultContentType` is **Breaking**
 
 1. Change in `schema`
 1. Change in `location`
-1. Change in value of `$ref`
 
 **Non-Breaking:**
 
+1. Change in value of `$ref`
 1. Change in `description`
 
 ### `components`
@@ -227,19 +227,17 @@ Any change in `externalDocs` is **non-breaking**.
 1. Change in `default` (`variables`) in `servers`
 1. Removal in `enum` (`variables`) in `servers`
 1. Change in `security` in `servers`
-1.  Removal of channel
-1.  Removal of `subscribe` or `publish` field in `channels`
-1.  Change in value of `$ref` in `channels`
+1. Removal of channel(same as changing the channel name)
+1. Removal of `subscribe` or `publish` field in `channels`
 1. Change in `operationId` in `subscribe`|`publish`
 1. Change in `traits` in `subscribe`|`publish`
 1. Change in `contentType` in `message`
-1. Change in `name` in `message`
 1. Change in `payload` in `message`
 1. Change in `traits` in `message`
 1. Change in `headers` in `message`
+1. Change in `location` inside `correlationId` in `message`
 1. Change in `schema` in `parameters`
 1. Change in `location` in `parameters`
-1. Change in value of `$ref` in `parameters`
 
 ### Non-Breaking changes
 
@@ -253,20 +251,23 @@ Any change in `externalDocs` is **non-breaking**.
 1. Change in `description` (`variables`) in `servers`
 1. Change in `examples` (`variables`) in `servers`
 1. Addition in `enum` (`variables`) in `servers`
+1. Change in value of `$ref` in `channels`
 1. Change in `description` in `channels`
 1. Addition of `subscribe` or `publish` field in `channels`
 1. Change in `summary` in `subscribe`|`publish`
 1. Change in `description` in `subscribe`|`publish`
 1. Change in `externalDocs` in `subscribe`|`publish`
 1. Change in `tags` in `subscribe`|`publish`
+1. Change in `name` in `message`
 1. Change in `summary` in `message`
 1. Change in `description` in `message`
 1. Change in `examples` in `message`
 1. Change in `title` in `message`
 1. Change in `tags` in `message`
 1. Change in `externalDocs` in `message`
-1. Change in `correlationId` in `message`
+1. Change in `description` inside `correlationId` in `message`
 1. Change in `description` in `parameters`
 1. Change in `components`
 1. Change in `tags`
 1. Change in `externalDocs`
+1. Change in value of `$ref` in `parameters`
