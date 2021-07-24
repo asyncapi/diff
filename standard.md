@@ -217,7 +217,6 @@ Change in `defaultContentType` is **Breaking**
 
 1. Change in `schemaFormat`
 1. Change in `contentType`
-1. Change in `payload`
 1. Change in `schemaFromat`, `location` in `correlationId` (`traits`)
 1. Change in `location` in `correlationId`
 
@@ -239,6 +238,7 @@ Change in `defaultContentType` is **Breaking**
 1. Change in `bindings`
 1. Change in `headers` (`traits`)
 1. Change in `bindigs` (`traits`)
+1. Change in `payload`
 
 #### `parameters`
 
@@ -294,7 +294,6 @@ Any change in `externalDocs` is **non-breaking**.
 1. Change in `traits` in `subscribe`|`publish`
 1. Change in `schemaFormat` in `message`
 1. Change in `contentType` in `message`
-1. Change in `payload` in `message`
 1. Change in `traits` in `message`
 1. Change in `headers` in `message`
 1. Change in `location` inside `correlationId` in `message`
@@ -340,3 +339,4 @@ Any change in `externalDocs` is **non-breaking**.
 1. Change in `headers` in `message`
 1. Change in `headers` in message `traits`
 1. Change in `schema`in `parameters`
+1. Change in `payload` in `message`
