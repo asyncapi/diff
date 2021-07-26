@@ -7,10 +7,9 @@ import { URL } from 'url';
  * @param {String} path Path to document
  * @returns {Boolean} Whether the given path is URL or not
  */
-export function isUrl(path: string): boolean {
+export function isUrl(path: string): boolean | URL {
   if (path.startsWith('http')) {
-    new URL(path);
-    return true;
+    return new URL(path); // throw if invalid URL
   }
   return false;
 }
