@@ -1,0 +1,686 @@
+{
+  "asyncapi": {
+    "add": "non-breaking",
+    "remove": "breaking",
+    "edit": "breaking"
+  },
+  "id": {
+    "add": "non-breaking",
+    "remove": "non-breaking",
+    "edit": "non-breaking"
+  },
+  "defaultContentType": {
+    "add": "breaking",
+    "remove": "breaking",
+    "edit": "breaking"
+  },
+  "info": {
+    "add": "non-breaking",
+    "remove": "breaking",
+    "edit": "breaking",
+    "children": {
+      "version": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking"
+      },
+      "termsOfService": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking"
+      },
+      "license": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking",
+        "children": {
+          "name": {
+            "add": "breaking",
+            "remove": "breaking",
+            "edit": "breaking"
+          },
+          "url": {
+            "add": "breaking",
+            "remove": "non-breaking",
+            "edit": "non-breaking"
+          }
+        }
+      },
+      "title": {
+        "add": "non-breaking",
+        "remove": "non-breaking",
+        "edit": "non-breaking"
+      },
+      "description": {
+        "add": "non-breaking",
+        "remove": "non-breaking",
+        "edit": "non-breaking"
+      },
+      "contact": {
+        "add": "non-breaking",
+        "remove": "non-breaking",
+        "edit": "non-breaking",
+        "children": {
+          "name": {
+            "add": "non-breaking",
+            "remove": "non-breaking",
+            "edit": "non-breaking"
+          },
+          "url": {
+            "add": "non-breaking",
+            "remove": "non-breaking",
+            "edit": "non-breaking"
+          },
+          "email": {
+            "add": "non-breaking",
+            "remove": "non-breaking",
+            "edit": "non-breaking"
+          }
+        }
+      }
+    }
+  },
+  "servers": {
+    "add": "non-breaking",
+    "remove": "breaking",
+    "edit": "breaking",
+    "children": {
+      "{placeholder}": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking",
+        "children": {
+          "url": {
+            "add": "non-breaking",
+            "remove": "breaking",
+            "edit": "breaking"
+          },
+          "description": {
+            "add": "non-breaking",
+            "remove": "non-breaking",
+            "edit": "non-breaking"
+          },
+          "protocol": {
+            "add": "breaking",
+            "remove": "breaking",
+            "edit": "breaking"
+          },
+          "protocolVersion": {
+            "add": "breaking",
+            "remove": "breaking",
+            "edit": "breaking"
+          },
+          "variables": {
+            "add": "non-breaking",
+            "remove": "breaking",
+            "edit": "breaking",
+            "{placeholder}": {
+              "add": "non-breaking",
+              "remove": "breaking",
+              "edit": "breaking",
+              "children": {
+                "enum": {
+                  "add": "non-breaking",
+                  "remove": "breaking",
+                  "edit": "breaking"
+                },
+                "default": {
+                  "add": "breaking",
+                  "remove": "breaking",
+                  "edit": "breaking"
+                },
+                "description": {
+                  "add": "non-breaking",
+                  "remove": "non-breaking",
+                  "edit": "non-breaking"
+                },
+                "examples": {
+                  "add": "non-breaking",
+                  "remove": "non-breaking",
+                  "edit": "non-breaking"
+                }
+              }
+            }
+          },
+          "security": {
+            "add": "breaking",
+            "remove": "breaking",
+            "edit": "breaking"
+          },
+          "bindings": {
+            "add": "unclassified",
+            "remove": "unclassified",
+            "edit": "unclassified"
+          }
+        }
+      }
+    }
+  },
+  "channels": {
+    "add": "non-breaking",
+    "remove": "breaking",
+    "edit": "breaking",
+    "children": {
+      "{placeholder}": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking",
+        "children": {
+          "description": {
+            "add": "non-breaking",
+            "remove": "non-breaking",
+            "edit": "non-breaking"
+          },
+          "bindings": {
+            "add": "unclassified",
+            "remove": "unclassified",
+            "edit": "unclassified"
+          },
+          "subscribe": {
+            "add": "non-breaking",
+            "remove": "breaking",
+            "edit": "breaking",
+            "children": {
+              "operationId": {
+                "add": "non-breaking",
+                "remove": "breaking",
+                "edit": "breaking"
+              },
+              "summary": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "description": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "tags": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "externalDocs": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "bindings": {
+                "add": "unclassified",
+                "remove": "unclassified",
+                "edit": "unclassified"
+              },
+              "traits": {
+                "add": "non-breaking",
+                "remove": "breaking",
+                "edit": "breaking",
+                "children": {
+                  "operationId": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking"
+                  },
+                  "summary": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "description": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "tags": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "externalDocs": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "bindings": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  }
+                }
+              },
+              "message": {
+                "add": "breaking",
+                "remove": "breaking",
+                "edit": "breaking",
+                "children": {
+                  "headers": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  },
+                  "correlationId": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking",
+                    "children": {
+                      "location": {
+                        "add": "non-breaking",
+                        "remove": "breaking",
+                        "edit": "breaking"
+                      },
+                      "description": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      }
+                    }
+                  },
+                  "schemaFormat": {
+                    "add": "breaking",
+                    "remove": "breaking",
+                    "edit": "breaking"
+                  },
+                  "contentType": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking"
+                  },
+                  "name": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "title": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "summary": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "tags": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "externalDocs": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "bindings": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  },
+                  "examples": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "traits": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking",
+                    "children": {
+                      "headers": {
+                        "add": "unclassified",
+                        "remove": "unclassified",
+                        "edit": "unclassified"
+                      },
+                      "correlationId": {
+                        "add": "non-breaking",
+                        "remove": "breaking",
+                        "edit": "breaking",
+                        "children": {
+                          "location": {
+                            "add": "non-breaking",
+                            "remove": "breaking",
+                            "edit": "breaking"
+                          },
+                          "description": {
+                            "add": "non-breaking",
+                            "remove": "non-breaking",
+                            "edit": "non-breaking"
+                          }
+                        }
+                      },
+                      "schemaFormat": {
+                        "add": "breaking",
+                        "remove": "breaking",
+                        "edit": "breaking"
+                      },
+                      "contentType": {
+                        "add": "non-breaking",
+                        "remove": "breaking",
+                        "edit": "breaking"
+                      },
+                      "name": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "title": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "summary": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "tags": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "externalDocs": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "bindings": {
+                        "add": "unclassified",
+                        "remove": "unclassified",
+                        "edit": "unclassified"
+                      },
+                      "examples": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      }
+                    }
+                  },
+                  "description": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "payload": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  }
+                }
+              }
+            }
+          },
+          "publish": {
+            "add": "non-breaking",
+            "remove": "breaking",
+            "edit": "breaking",
+            "children": {
+              "operationId": {
+                "add": "non-breaking",
+                "remove": "breaking",
+                "edit": "breaking"
+              },
+              "summary": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "description": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "tags": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "externalDocs": {
+                "add": "non-breaking",
+                "remove": "non-breaking",
+                "edit": "non-breaking"
+              },
+              "bindings": {
+                "add": "unclassified",
+                "remove": "unclassified",
+                "edit": "unclassified"
+              },
+              "traits": {
+                "add": "non-breaking",
+                "remove": "breaking",
+                "edit": "breaking",
+                "children": {
+                  "operationId": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking"
+                  },
+                  "summary": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "description": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "tags": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "externalDocs": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "bindings": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  }
+                }
+              },
+              "message": {
+                "add": "breaking",
+                "remove": "breaking",
+                "edit": "breaking",
+                "children": {
+                  "headers": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  },
+                  "correlationId": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking",
+                    "children": {
+                      "location": {
+                        "add": "non-breaking",
+                        "remove": "breaking",
+                        "edit": "breaking"
+                      },
+                      "description": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      }
+                    }
+                  },
+                  "schemaFormat": {
+                    "add": "breaking",
+                    "remove": "breaking",
+                    "edit": "breaking"
+                  },
+                  "contentType": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking"
+                  },
+                  "name": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "title": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "summary": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "tags": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "externalDocs": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "bindings": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  },
+                  "examples": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "traits": {
+                    "add": "non-breaking",
+                    "remove": "breaking",
+                    "edit": "breaking",
+                    "children": {
+                      "headers": {
+                        "add": "unclassified",
+                        "remove": "unclassified",
+                        "edit": "unclassified"
+                      },
+                      "correlationId": {
+                        "add": "non-breaking",
+                        "remove": "breaking",
+                        "edit": "breaking",
+                        "children": {
+                          "location": {
+                            "add": "non-breaking",
+                            "remove": "breaking",
+                            "edit": "breaking"
+                          },
+                          "description": {
+                            "add": "non-breaking",
+                            "remove": "non-breaking",
+                            "edit": "non-breaking"
+                          }
+                        }
+                      },
+                      "schemaFormat": {
+                        "add": "breaking",
+                        "remove": "breaking",
+                        "edit": "breaking"
+                      },
+                      "contentType": {
+                        "add": "non-breaking",
+                        "remove": "breaking",
+                        "edit": "breaking"
+                      },
+                      "name": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "title": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "summary": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "tags": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "externalDocs": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      },
+                      "bindings": {
+                        "add": "unclassified",
+                        "remove": "unclassified",
+                        "edit": "unclassified"
+                      },
+                      "examples": {
+                        "add": "non-breaking",
+                        "remove": "non-breaking",
+                        "edit": "non-breaking"
+                      }
+                    }
+                  },
+                  "description": {
+                    "add": "non-breaking",
+                    "remove": "non-breaking",
+                    "edit": "non-breaking"
+                  },
+                  "payload": {
+                    "add": "unclassified",
+                    "remove": "unclassified",
+                    "edit": "unclassified"
+                  }
+                }
+              }
+            }
+          },
+          "parameters": {
+            "add": "breaking",
+            "remove": "breaking",
+            "edit": "breaking",
+            "children": {
+              "{placeholder}": {
+                "description": {
+                  "add": "non-breaking",
+                  "remove": "non-breaking",
+                  "edit": "non-breaking"
+                },
+                "schema": {
+                  "add": "unclassified",
+                  "remove": "unclassified",
+                  "edit": "unclassified"
+                },
+                "location": {
+                  "add": "breaking",
+                  "remove": "breaking",
+                  "edit": "breaking"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "add": "non-breaking",
+    "remove": "non-breaking",
+    "edit": "non-breaking"
+  },
+  "tags": {
+    "add": "non-breaking",
+    "remove": "non-breaking",
+    "edit": "non-breaking"
+  },
+  "externalDocs": {
+    "add": "non-breaking",
+    "remove": "non-breaking",
+    "edit": "non-breaking"
+  }
+}
