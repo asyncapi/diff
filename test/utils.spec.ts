@@ -9,6 +9,6 @@ describe('Utils', () => {
   });
 
   test('readDocument function', async () => {
-    expect(await readDocument('./test/spec/asyncapi.yml')).toEqual(AsyncAPIDoc);
+    expect((await readDocument('./test/spec/asyncapi.yml')).replace(/\r\n/g, '\n')).toEqual(AsyncAPIDoc);
   });
 });
