@@ -19,42 +19,25 @@
     "remove": "breaking",
     "edit": "breaking",
     "children": {
-      "version": {
-        "add": "non-breaking",
-        "remove": "breaking",
-        "edit": "breaking"
-      },
-      "termsOfService": {
-        "add": "non-breaking",
-        "remove": "breaking",
-        "edit": "breaking"
-      },
-      "license": {
-        "add": "non-breaking",
-        "remove": "breaking",
-        "edit": "breaking",
-        "children": {
-          "name": {
-            "add": "breaking",
-            "remove": "breaking",
-            "edit": "breaking"
-          },
-          "url": {
-            "add": "breaking",
-            "remove": "non-breaking",
-            "edit": "non-breaking"
-          }
-        }
-      },
       "title": {
         "add": "non-breaking",
         "remove": "non-breaking",
         "edit": "non-breaking"
       },
+      "version": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking"
+      },
       "description": {
         "add": "non-breaking",
         "remove": "non-breaking",
         "edit": "non-breaking"
+      },
+      "termsOfService": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking"
       },
       "contact": {
         "add": "non-breaking",
@@ -73,6 +56,23 @@
           },
           "email": {
             "add": "non-breaking",
+            "remove": "non-breaking",
+            "edit": "non-breaking"
+          }
+        }
+      },
+      "license": {
+        "add": "non-breaking",
+        "remove": "breaking",
+        "edit": "breaking",
+        "children": {
+          "name": {
+            "add": "breaking",
+            "remove": "breaking",
+            "edit": "breaking"
+          },
+          "url": {
+            "add": "breaking",
             "remove": "non-breaking",
             "edit": "non-breaking"
           }
