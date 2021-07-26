@@ -16,7 +16,7 @@ export function isUrl(path: string): boolean {
 }
 
 /**
- * Synchronously reads the entire content of passed document file
+ * Asynchronously reads the entire content of passed document file
  * @param {String} path Path to document
  * @returns {Promise<String>} The entire content of a file
  */
