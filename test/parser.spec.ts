@@ -9,11 +9,11 @@ describe('Parser', () => {
       'https://raw.githubusercontent.com/asyncapi/parser-js/master/test/good/asyncapi-messages-channels.yml'
     );
 
-    expect(JSON.stringify(parsedData.firstDocument.json())).toEqual(
+    expect(JSON.stringify(parsedData.firstDocument.json()).replace(/\r\n/g, '\n')).toEqual(
       outputJSONMessagesChannels
     );
 
-    expect(JSON.stringify(parsedData.secondDocument.json())).toEqual(
+    expect(JSON.stringify(parsedData.secondDocument.json()).replace(/\r\n/g, '\n')).toEqual(
       outputJSONMessagesChannels
     );
   });
@@ -25,10 +25,10 @@ describe('Parser', () => {
       'https://raw.githubusercontent.com/asyncapi/parser-js/master/test/good/asyncapi-messages-channels.yml'
     );
 
-    expect(JSON.stringify(parsedData.firstDocument.json())).toEqual(
+    expect(JSON.stringify(parsedData.firstDocument.json()).replace(/\r\n/g, '\n')).toEqual(
       outputJSONMessagesChannels
     );
-    expect(JSON.stringify(parsedData.secondDocument.json())).toEqual(
+    expect(JSON.stringify(parsedData.secondDocument.json()).replace(/\r\n/g, '\n')).toEqual(
       outputJSONMessagesChannels
     );
   });

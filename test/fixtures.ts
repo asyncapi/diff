@@ -37,3 +37,5 @@ components:
           some-common-header:
             type: string
 `;
+
+export const whiteChar = '';
