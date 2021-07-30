@@ -1,7 +1,7 @@
 import { compare, Operation } from 'fast-json-patch';
 
 import {
-  handlePath,
+  setIndex,
   formatAction,
   getBeforeValue,
   getAfterValue,
@@ -19,7 +19,8 @@ function modifyDiffOutput(diff: Operation[], firstDocument: any): DiffOutput[] {
   for (const value of diff) {
     const changeObject = {} as DiffOutput;
     changeObject.action = formatAction(value.op);
-    handlePath(changeObject, value.path);
+    changeObject.path = value.path;
+    setIndex(changeObject, value.path);
     if (value.op === 'remove' || value.op === 'replace') {
       changeObject.before = getBeforeValue(firstDocument, value.path);
     }

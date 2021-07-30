@@ -51,19 +51,16 @@ export function getAfterValue(diffObject: Operation): any {
 }
 
 /**
- * Format the path to incorporate the array changes
- * This will do all the work of handling array indexes
+ * Sets the index property in case of an array change
  * @param changeObject The change object
  * @param {String} path The original path
  */
-export function handlePath(changeObject: DiffOutput, path: string): void {
+export function setIndex(changeObject: DiffOutput, path: string): void {
   const splittedPath = path.split('/');
   const lastPathElement = splittedPath[splittedPath.length - 1];
   const lastElementNumber = Number(lastPathElement);
   if (!Number.isNaN(lastElementNumber)) {
     // if the last element is a Number, then it belongs to an array
     changeObject.index = lastElementNumber; // set the index
-    splittedPath.pop(); // remove the last element
   }
-  changeObject.path = splittedPath.join('/');
 }

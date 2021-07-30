@@ -12,7 +12,7 @@ describe('Diff', () => {
     expect(diff(firstDocument, secondDocument)).toStrictEqual([
       {
         action: 'remove',
-        path: '/servers/production/enum',
+        path: '/servers/production/enum/2',
         index: 2,
         before: 3,
       },

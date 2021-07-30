@@ -2,7 +2,7 @@ import {
   DiffOutput,
   formatAction,
   getBeforeValue,
-  handlePath,
+  setIndex,
 } from '../../src/helpers/DiffHelpers';
 
 import { firstDocument } from '../fixtures';
@@ -20,19 +20,16 @@ describe('Diff Helpers', () => {
     );
   });
 
-  test('handlePath function without array change', () => {
+  test('setIndex function without array change', () => {
     const changeObject = {} as DiffOutput;
-    handlePath(changeObject, '/servers');
-    expect(changeObject).toStrictEqual({
-      path: '/servers',
-    });
+    setIndex(changeObject, '/servers');
+    expect(changeObject).toStrictEqual({});
   });
 
   test('handlePath function with array change', () => {
     const changeObject = {} as DiffOutput;
-    handlePath(changeObject, '/servers/production/tags/10');
+    setIndex(changeObject, '/servers/production/tags/10');
     expect(changeObject).toStrictEqual({
-      path: '/servers/production/tags',
       index: 10,
     });
   });
