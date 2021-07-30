@@ -22,15 +22,15 @@ describe('Diff Helpers', () => {
 
   test('setIndex function without array change', () => {
     const changeObject = {} as DiffOutput;
-    setIndex(changeObject, '/servers');
+    setIndex(changeObject, firstDocument, '/servers');
     expect(changeObject).toStrictEqual({});
   });
 
   test('handlePath function with array change', () => {
     const changeObject = {} as DiffOutput;
-    setIndex(changeObject, '/servers/production/tags/10');
+    setIndex(changeObject, firstDocument, '/servers/production/enum/1');
     expect(changeObject).toStrictEqual({
-      index: 10,
+      index: 1,
     });
   });
 });

@@ -55,11 +55,20 @@ export function getAfterValue(diffObject: Operation): any {
  * @param changeObject The change object
  * @param {String} path The original path
  */
-export function setIndex(changeObject: DiffOutput, path: string): void {
+export function setIndex(
+  changeObject: DiffOutput,
+  firstDocument: any,
+  path: string
+): void {
   const splittedPath = path.split('/');
   const lastPathElement = splittedPath[splittedPath.length - 1];
   const lastElementNumber = Number(lastPathElement);
-  if (!Number.isNaN(lastElementNumber)) {
+  splittedPath.pop();
+  const assembledPath = splittedPath.join('/');
+  if (
+    !Number.isNaN(lastElementNumber) &&
+    Array.isArray(getValueByPointer(firstDocument, assembledPath))
+  ) {
     // if the last element is a Number, then it belongs to an array
     changeObject.index = lastElementNumber; // set the index
   }

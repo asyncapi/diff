@@ -20,7 +20,7 @@ function modifyDiffOutput(diff: Operation[], firstDocument: any): DiffOutput[] {
     const changeObject = {} as DiffOutput;
     changeObject.action = formatAction(value.op);
     changeObject.path = value.path;
-    setIndex(changeObject, value.path);
+    setIndex(changeObject, firstDocument, value.path);
     if (value.op === 'remove' || value.op === 'replace') {
       changeObject.before = getBeforeValue(firstDocument, value.path);
     }
