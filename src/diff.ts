@@ -14,9 +14,9 @@ import {
  * @param {*} firstDocument The first document
  * @returns {DiffOutput[]} The modified diffs array
  */
-function modifyDiffOutput(diff: Operation[], firstDocument: any): DiffOutput[] {
+function modifyDiffOutput(diffInput: Operation[], firstDocument: any): DiffOutput[] {
   const output: DiffOutput[] = [];
-  for (const value of diff) {
+  for (const value of diffInput) {
     const changeObject = {} as DiffOutput;
     changeObject.action = formatAction(value.op);
     changeObject.path = value.path;
