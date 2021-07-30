@@ -1,0 +1,69 @@
+import {
+  Operation,
+  ReplaceOperation,
+  AddOperation,
+  getValueByPointer,
+} from 'fast-json-patch';
+
+export interface DiffOutput {
+  action: string;
+  path: string;
+  index?: number;
+  before?: any;
+  after?: any;
+}
+
+type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
+
+/**
+ * Formats the action to have one of `add`, `remove` or `edit` values
+ * @param {String} action The action performed by the diff library
+ * @returns {String} The formatted action output
+ */
+export function formatAction(action: string): string {
+  if (action === 'replace') {
+    return 'edit';
+  }
+  // since `add` and `remove` are already provided by the library, we don't need to change that.
+  return action;
+}
+
+/**
+ * Get the `before` value from the first document
+ * @param firstDocument The first document which we will get the before value from
+ * @param {String} path The path from where we can get the value
+ * @returns The value from the first document
+ */
+export function getBeforeValue(firstDocument: any, path: string): any {
+  // since our current diffing library doesn't provide the `before` value
+  // we have to get it manually from the first document
+  return getValueByPointer(firstDocument, path);
+}
+
+/**
+ * Get the `after` value
+ * @param diffObject A single diff object
+ * @returns The value that is present inside the second document
+ */
+export function getAfterValue(diffObject: Operation): any {
+  // The diffing library already provides the `after` value for `add` or `edit` actions
+  return (diffObject as ValueOperation).value;
+}
+
+/**
+ * Format the path to incorporate the array changes
+ * This will do all the work of handling array indexes
+ * @param changeObject The change object
+ * @param {String} path The original path
+ */
+export function handlePath(changeObject: DiffOutput, path: string): void {
+  const splittedPath = path.split('/');
+  const lastPathElement = splittedPath[splittedPath.length - 1];
+  const lastElementNumber = Number(lastPathElement);
+  if (!Number.isNaN(lastElementNumber)) {
+    // if the last element is a Number, then it belongs to an array
+    changeObject.index = lastElementNumber; // set the index
+    splittedPath.pop(); // remove the last element
+  }
+  changeObject.path = splittedPath.join('/');
+}
