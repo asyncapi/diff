@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { parser } from '../src/parser';
-import { outputJSONMessagesChannels } from './fixtures';
+import { outputJSONMessagesChannels } from './fixtures/parser.fixtures';
 
 describe('Parser', () => {
   test('Check whether parser returns the expected output or not(relative path)', async () => {

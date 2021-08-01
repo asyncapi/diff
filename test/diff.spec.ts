@@ -1,7 +1,12 @@
 import diff from '../src/diff';
 import { parser } from '../src/parser';
 
-import { firstDocument, secondDocument, diffOutput } from './fixtures';
+import {
+  firstDocument,
+  secondDocument,
+  diffLocalOutput,
+  diffOutput,
+} from './fixtures/diff.fixtures';
 
 describe('Diff', () => {
   test('Check if diff is an empty array for same inputs', () => {
@@ -9,20 +14,7 @@ describe('Diff', () => {
   });
 
   test('Check diff output with local inputs', () => {
-    expect(diff(firstDocument, secondDocument)).toStrictEqual([
-      {
-        action: 'remove',
-        path: '/servers/production/enum/2',
-        index: 2,
-        before: 3,
-      },
-      {
-        action: 'edit',
-        path: '/servers/production/name',
-        before: 'production',
-        after: 'production-dev',
-      },
-    ]);
+    expect(diff(firstDocument, secondDocument)).toStrictEqual(diffLocalOutput);
   });
 
   test('Check diff output through parser with no difference', async () => {
