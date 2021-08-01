@@ -75,3 +75,30 @@ export function setIndex(
     changeObject.index = lastElementNumber; // set the index
   }
 }
+
+/**
+ * Formats the original diff output
+ * @param {Operation[]} diff The original diff array
+ * @param {*} firstDocument The first document
+ * @returns {DiffOutput[]} The modified diffs array
+ */
+export function modifyDiffOutput(
+  diffInput: Operation[],
+  firstDocument: any
+): DiffOutput[] {
+  const output: DiffOutput[] = [];
+  for (const value of diffInput) {
+    const changeObject = {} as DiffOutput;
+    changeObject.action = formatAction(value.op);
+    changeObject.path = value.path;
+    setIndex(changeObject, firstDocument, value.path);
+    if (value.op === 'remove' || value.op === 'replace') {
+      changeObject.before = getBeforeValue(firstDocument, value.path);
+    }
+    if (value.op === 'replace' || value.op === 'add') {
+      changeObject.after = getAfterValue(value);
+    }
+    output.push(changeObject);
+  }
+  return output;
+}

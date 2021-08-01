@@ -1,36 +1,6 @@
-import { compare, Operation } from 'fast-json-patch';
+import { compare } from 'fast-json-patch';
 
-import {
-  setIndex,
-  formatAction,
-  getBeforeValue,
-  getAfterValue,
-  DiffOutput,
-} from './helpers/DiffHelpers';
-
-/**
- * Formats the original diff output
- * @param {Operation[]} diff The original diff array
- * @param {*} firstDocument The first document
- * @returns {DiffOutput[]} The modified diffs array
- */
-function modifyDiffOutput(diffInput: Operation[], firstDocument: any): DiffOutput[] {
-  const output: DiffOutput[] = [];
-  for (const value of diffInput) {
-    const changeObject = {} as DiffOutput;
-    changeObject.action = formatAction(value.op);
-    changeObject.path = value.path;
-    setIndex(changeObject, firstDocument, value.path);
-    if (value.op === 'remove' || value.op === 'replace') {
-      changeObject.before = getBeforeValue(firstDocument, value.path);
-    }
-    if (value.op === 'replace' || value.op === 'add') {
-      changeObject.after = getAfterValue(value);
-    }
-    output.push(changeObject);
-  }
-  return output;
-}
+import { modifyDiffOutput, DiffOutput } from './helpers/DiffHelpers';
 
 /**
  * Generates the diff
