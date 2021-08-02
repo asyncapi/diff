@@ -69,7 +69,7 @@ export function setIndex(
  * @param {*} firstDocument The first document
  * @returns {DiffOutput[]} The modified diffs array
  */
-export function modifyDiffOutput(
+export function formatDiffOutput(
   diffInput: Operation[],
   firstDocument: any
 ): DiffOutput[] {

@@ -4,7 +4,7 @@ import {
   formatAction,
   getBeforeValue,
   setIndex,
-  modifyDiffOutput,
+  formatDiffOutput,
 } from '../../src/helpers/DiffHelpers';
 import { DiffOutput } from '../../src/types';
 import {
@@ -46,25 +46,25 @@ describe('Diff Helpers', () => {
   });
 });
 
-describe('modifyDiffOutput function', () => {
+describe('formatDiffOutput function', () => {
   test('should return an empty array after passing empty diff', () => {
-    expect(modifyDiffOutput([], {})).toEqual([]);
+    expect(formatDiffOutput([], {})).toEqual([]);
   });
 
   test('using add operation', () => {
-    expect(modifyDiffOutput(diffAdd as Operation[], {})).toStrictEqual(
+    expect(formatDiffOutput(diffAdd as Operation[], {})).toStrictEqual(
       diffAddOutput
     );
   });
 
   test('using remove operation', () => {
     expect(
-      modifyDiffOutput(diffRemove as Operation[], modifyDiffInput)
+      formatDiffOutput(diffRemove as Operation[], modifyDiffInput)
     ).toStrictEqual(diffRemoveOutput);
   });
 
   test('should throw error when firstDocuments is empty', () => {
-    expect(() => modifyDiffOutput(diffRemove as Operation[], {})).toThrowError(
+    expect(() => formatDiffOutput(diffRemove as Operation[], {})).toThrowError(
       // eslint-disable-next-line quotes
       new TypeError("Cannot read property 'production' of undefined")
     );
@@ -72,7 +72,7 @@ describe('modifyDiffOutput function', () => {
 
   test('using edit operation', () => {
     expect(
-      modifyDiffOutput(diffEdit as Operation[], modifyDiffInput)
+      formatDiffOutput(diffEdit as Operation[], modifyDiffInput)
     ).toStrictEqual(diffEditOutput);
   });
 });

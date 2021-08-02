@@ -1,6 +1,6 @@
 import { compare } from 'fast-json-patch';
 
-import { modifyDiffOutput } from './helpers/DiffHelpers';
+import { formatDiffOutput } from './helpers/DiffHelpers';
 import { DiffOutput } from './types';
 
 /**
@@ -14,5 +14,5 @@ export default function diff(
   secondDocument: any
 ): DiffOutput[] {
   const diffOutput = compare(firstDocument, secondDocument);
-  return modifyDiffOutput(diffOutput, firstDocument);
+  return formatDiffOutput(diffOutput, firstDocument);
 }
