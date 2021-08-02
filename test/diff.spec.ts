@@ -27,16 +27,6 @@ describe('Diff', () => {
     ).toStrictEqual([]);
   });
 
-  test('Check diff output through parser with no difference', async () => {
-    const parsedData = await parser(
-      './test/spec/asyncapi.yml',
-      'https://raw.githubusercontent.com/asyncapi/parser-js/master/test/good/asyncapi-messages-channels.yml'
-    );
-    expect(
-      diff(parsedData.firstDocument.json(), parsedData.secondDocument.json())
-    ).toStrictEqual([]);
-  });
-
   test('Check diff output through parser with difference input', async () => {
     const parsedData = await parser(
       './test/spec/asyncapi.yml',

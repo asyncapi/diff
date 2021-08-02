@@ -41,7 +41,7 @@ describe('Diff Helpers', () => {
     const changeObject = {} as DiffOutput;
     setIndex(changeObject, firstDocument, '/servers/production/enum/1');
     expect(changeObject).toStrictEqual({
-      index: 1,
+      isArrayIndex: true,
     });
   });
 });

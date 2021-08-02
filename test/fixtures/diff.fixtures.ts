@@ -22,7 +22,7 @@ export const diffLocalOutput = [
   {
     action: 'remove',
     path: '/servers/production/enum/2',
-    index: 2,
+    isArrayIndex: true,
     before: 3,
   },
   {

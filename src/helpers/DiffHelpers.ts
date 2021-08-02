@@ -58,8 +58,8 @@ export function setIndex(
   ) {
     // if the last element is a Number
     // and the path before the last element is an array
-    // then the change has been made inside an array, therefore set its index
-    changeObject.index = lastElementNumber; // set the index
+    // then the change has been made inside an array, therefore set index as true
+    changeObject.isArrayIndex = true;
   }
 }
 

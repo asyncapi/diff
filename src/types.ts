@@ -3,7 +3,7 @@ import { ReplaceOperation, AddOperation } from 'fast-json-patch';
 export interface DiffOutput {
   action: string;
   path: string;
-  index?: number;
+  isArrayIndex?: boolean;
   before?: any;
   after?: any;
 }
