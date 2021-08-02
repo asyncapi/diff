@@ -1,12 +1,12 @@
 import { Operation } from 'fast-json-patch';
 
 import {
-  DiffOutput,
   formatAction,
   getBeforeValue,
   setIndex,
   modifyDiffOutput,
 } from '../../src/helpers/DiffHelpers';
+import { DiffOutput } from '../../src/types';
 import {
   firstDocument,
   diffAdd,

@@ -1,19 +1,6 @@
-import {
-  Operation,
-  ReplaceOperation,
-  AddOperation,
-  getValueByPointer,
-} from 'fast-json-patch';
+import { Operation, getValueByPointer } from 'fast-json-patch';
 
-export interface DiffOutput {
-  action: string;
-  path: string;
-  index?: number;
-  before?: any;
-  after?: any;
-}
-
-type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
+import { DiffOutput, ValueOperation } from '../types';
 
 /**
  * Formats the action to have one of `add`, `remove` or `edit` values

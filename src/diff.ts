@@ -1,6 +1,7 @@
 import { compare } from 'fast-json-patch';
 
-import { modifyDiffOutput, DiffOutput } from './helpers/DiffHelpers';
+import { modifyDiffOutput } from './helpers/DiffHelpers';
+import { DiffOutput } from './types';
 
 /**
  * Generates the diff
