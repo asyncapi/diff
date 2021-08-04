@@ -1,10 +1,12 @@
 /* eslint-disable security/detect-object-injection */
 import { generateClassifierPath } from './ClassifierHelpers';
 
+type ChangeTypes = 'breaking' | 'non-breaking' | 'unclassified';
+
 interface Classifier {
-  add: 'breaking' | 'non-breaking' | 'unclassified';
-  remove: 'breaking' | 'non-breaking' | 'unclassified';
-  edit: 'breaking' | 'non-breaking' | 'unclassified';
+  add: ChangeTypes;
+  remove: ChangeTypes;
+  edit: ChangeTypes;
 }
 
 /**
