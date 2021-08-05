@@ -1,7 +1,14 @@
 /* eslint-disable security/detect-object-injection */
+// Disabling this since the object from which we are accessing the properties won't have any prototype chain.
+// Also, since we are just using this object to access properties, its safe to disable security check for now.
+
 import { generateClassifierPath } from './ClassifierHelpers';
 
-type ChangeTypes = 'breaking' | 'non-breaking' | 'unclassified';
+const breaking = 'breaking';
+const nonBreaking = 'non-breaking';
+const unclassified = 'unclassified';
+
+type ChangeTypes = typeof breaking | typeof nonBreaking | typeof unclassified;
 
 interface Classifier {
   add: ChangeTypes;
@@ -19,9 +26,9 @@ export default function classifier(standard: any, path: string): Classifier {
   const classifierPath = generateClassifierPath(standard, path);
   if (!classifierPath) {
     return {
-      add: 'unclassified',
-      remove: 'unclassified',
-      edit: 'unclassified',
+      add: unclassified,
+      remove: unclassified,
+      edit: unclassified,
     };
   }
   return standard[classifierPath];
