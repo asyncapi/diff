@@ -26,12 +26,11 @@ export function generateClassifierPath(
   standard: any,
   path: string
 ): string | undefined {
-  // Example: path => '/servers/production/protocol'
+  // See this PR for a detailed walkthrough of this code with an example: https://github.com/asyncapi/diff/pull/19
   const pathArray = path.split('/');
-  // pathArray => ['', 'servers', 'production', 'protocol'];
   for (let i = 0; i < pathArray.length; i++) {
-    const slicedPathSegment = pathArray.slice(0, i + 1); // [''] || ['', 'servers'] || ['', 'servers', 'production']
-    const pathSegment = slicedPathSegment.join('/'); // '' || '/servers' || '/servers/production'
+    const slicedPathSegment = pathArray.slice(0, i + 1);
+    const pathSegment = slicedPathSegment.join('/');
     if (pathSegment === '') {
       continue;
     }
@@ -39,12 +38,12 @@ export function generateClassifierPath(
       // if the property is found, skip the steps and move onto next iteration
       continue;
     }
-    const newPathSegment = changeLastElementToPlaceholder(slicedPathSegment); // '/servers/production' -> '/servers/*'
+    const newPathSegment = changeLastElementToPlaceholder(slicedPathSegment);
     if (!standard[newPathSegment]) {
       // path with * not found
       return undefined;
     }
-    pathArray[i] = '*'; // ['', 'servers', '*', 'protocol']
+    pathArray[i] = '*';
   }
-  return pathArray.join('/'); // '/servers/*/protocol'
+  return pathArray.join('/');
 }
