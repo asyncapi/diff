@@ -21,4 +21,10 @@ describe('classifier', () => {
       correctClassification
     );
   });
+
+  test('should return the correct classification with placeholder path', () => {
+    expect(classifier(demoStandard, '/servers/google/protocol')).toStrictEqual(
+      correctClassification
+    );
+  });
 });

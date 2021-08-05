@@ -10,6 +10,11 @@ export const demoStandard = {
     remove: 'breaking',
     edit: 'breaking',
   },
+  '/servers/*/protocol': {
+    add: 'non-breaking',
+    remove: 'breaking',
+    edit: 'breaking',
+  },
 };
 
 export const correctClassification = {

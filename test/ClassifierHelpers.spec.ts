@@ -29,4 +29,16 @@ describe('generateClassifierPath function', () => {
       '/servers/*'
     );
   });
+
+  test('shold return undefined for non-existing path', () => {
+    expect(
+      generateClassifierPath(demoStandard, '/servers/google/someProperty')
+    ).toEqual(undefined);
+  });
+
+  test('shold return correct path', () => {
+    expect(
+      generateClassifierPath(demoStandard, '/servers/google/protocol')
+    ).toBe('/servers/*/protocol');
+  });
 });
