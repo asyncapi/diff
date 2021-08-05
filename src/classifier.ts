@@ -19,7 +19,7 @@ interface Classifier {
 /**
  * Gets the classifier object from the standard object using the provided path
  * @param standard The standard object
- * @param path The path provided by the diff
+ * @param path The JSONpointer path provided by the diff
  * @returns The classifier object containing `add`, `remove` & `edit` properties
  */
 export default function classifier(standard: any, path: string): Classifier {

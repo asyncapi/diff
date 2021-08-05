@@ -19,7 +19,7 @@ export function changeLastElementToPlaceholder(path: string[]): string {
 /**
  * Generates the correct path to get the classification data from standard
  * @param standard The standard object
- * @param path The path to find
+ * @param path The JSONpointer path to find
  * @returns The path found
  */
 export function generateClassifierPath(
@@ -27,7 +27,8 @@ export function generateClassifierPath(
   path: string
 ): string | undefined {
   // Example: path => '/servers/production/protocol'
-  const pathArray = path.split('/'); // ['', 'servers', 'production', 'protocol'];
+  const pathArray = path.split('/');
+  // pathArray => ['', 'servers', 'production', 'protocol'];
   for (let i = 0; i < pathArray.length; i++) {
     const slicedPathSegment = pathArray.slice(0, i + 1); // [''] || ['', 'servers'] || ['', 'servers', 'production']
     const pathSegment = slicedPathSegment.join('/'); // '' || '/servers' || '/servers/production'
