@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-export const STANDARD = {
+const STANDARD = {
   '/asyncapi': {
     add: 'non-breaking',
     remove: 'breaking',
@@ -647,6 +647,12 @@ export const STANDARD = {
   },
 };
 
-export type Standard = typeof STANDARD;
+export type StandardType = typeof STANDARD;
 
-export const standardObject = Object.assign(Object.create(null), STANDARD);
+/**
+ * The standard object
+ */
+export const standard: StandardType = Object.assign(
+  Object.create(null),
+  STANDARD
+); // standard object without the prototype chain
