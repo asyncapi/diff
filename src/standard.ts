@@ -2,7 +2,10 @@ const breaking = 'breaking';
 const nonBreaking = 'non-breaking';
 const unclassified = 'unclassified';
 
-const STANDARD = {
+/**
+ * The standard object
+ */
+export const standard = {
   '/asyncapi': {
     add: nonBreaking,
     remove: breaking,
@@ -650,12 +653,4 @@ const STANDARD = {
   },
 };
 
-export type StandardType = typeof STANDARD;
-
-/**
- * The standard object
- */
-export const standard: StandardType = Object.assign(
-  Object.create(null),
-  STANDARD
-); // standard object without the prototype chain
+export type StandardType = typeof standard;
