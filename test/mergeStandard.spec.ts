@@ -1,4 +1,5 @@
-import { mergeStandard, OverrideObject } from '../src/mergeStandard';
+import { mergeStandard } from '../src/mergeStandard';
+import { OverrideObject } from '../src/types';
 import { standard } from '../src/standard';
 import {
   newKey,
@@ -6,7 +7,7 @@ import {
   standardAsString,
   mergedStandardAsString,
   exisitingKeyStandard,
-} from './mergeStandard.fixture';
+} from './fixtures/mergeStandard.fixture';
 
 describe('mergeStandard()', () => {
   test('with empty override object', () => {

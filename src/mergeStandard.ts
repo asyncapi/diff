@@ -1,14 +1,5 @@
 import { StandardType } from './standard';
-
-type ChangeType = 'breaking' | 'non-breaking' | 'unclassified';
-
-export type OverrideObject = {
-  [key: string]: {
-    add: ChangeType;
-    remove: ChangeType;
-    edit: ChangeType;
-  };
-};
+import { OverrideObject } from './types';
 
 /**
  * Merges two standard objects
