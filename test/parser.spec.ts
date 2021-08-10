@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { parser } from '../src/parser';
-import { outputJSONMessagesChannels } from './fixtures';
+import { outputJSONMessagesChannels } from './fixtures/parser.fixtures';
 
 describe('Parser', () => {
   test('Check whether parser returns the expected output or not(relative path)', async () => {
@@ -9,11 +9,11 @@ describe('Parser', () => {
       'https://raw.githubusercontent.com/asyncapi/parser-js/master/test/good/asyncapi-messages-channels.yml'
     );
 
-    expect(JSON.stringify(parsedData.firstDocument.json()).replace(/\r\n/g, '\n')).toEqual(
+    expect(JSON.stringify(parsedData.firstDocument.json())).toEqual(
       outputJSONMessagesChannels
     );
 
-    expect(JSON.stringify(parsedData.secondDocument.json()).replace(/\r\n/g, '\n')).toEqual(
+    expect(JSON.stringify(parsedData.secondDocument.json())).toEqual(
       outputJSONMessagesChannels
     );
   });
@@ -25,10 +25,10 @@ describe('Parser', () => {
       'https://raw.githubusercontent.com/asyncapi/parser-js/master/test/good/asyncapi-messages-channels.yml'
     );
 
-    expect(JSON.stringify(parsedData.firstDocument.json()).replace(/\r\n/g, '\n')).toEqual(
+    expect(JSON.stringify(parsedData.firstDocument.json())).toEqual(
       outputJSONMessagesChannels
     );
-    expect(JSON.stringify(parsedData.secondDocument.json()).replace(/\r\n/g, '\n')).toEqual(
+    expect(JSON.stringify(parsedData.secondDocument.json())).toEqual(
       outputJSONMessagesChannels
     );
   });

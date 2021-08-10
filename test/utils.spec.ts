@@ -1,5 +1,5 @@
 import { isUrl, readDocument } from '../src/utils';
-import { AsyncAPIDoc } from './fixtures';
+import { AsyncAPIDoc } from './fixtures/parser.fixtures';
 
 describe('Utils', () => {
   test('isUrl function', () => {
@@ -9,6 +9,8 @@ describe('Utils', () => {
   });
 
   test('readDocument function', async () => {
-    expect((await readDocument('./test/spec/asyncapi.yml')).replace(/\r\n/g, '\n')).toEqual(AsyncAPIDoc);
+    expect(
+      (await readDocument('./test/spec/asyncapi.yml')).replace(/\r\n/g, '\n')
+    ).toEqual(AsyncAPIDoc);
   });
 });
