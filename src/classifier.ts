@@ -2,7 +2,7 @@
 // Disabling this since the object from which we are accessing the properties won't have any prototype chain.
 // Also, since we are just using this object to access properties, its safe to disable security check for now.
 
-import { generateClassifierPath } from './Helpers/ClassifierHelpers';
+import { generateClassifierPath } from './helpers/ClassifierHelpers';
 
 const breaking = 'breaking';
 const nonBreaking = 'non-breaking';

@@ -1,7 +1,7 @@
 import {
   changeLastElementToPlaceholder,
   generateClassifierPath,
-} from '../src/Helpers/ClassifierHelpers';
+} from '../src/helpers/ClassifierHelpers';
 import { demoStandard } from './fixtures/classifier.fixtures';
 import { pathAsArray } from './fixtures/ClassifierHelpers.fixtures';
 
