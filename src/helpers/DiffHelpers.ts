@@ -1,18 +1,18 @@
 import { Operation, getValueByPointer } from 'fast-json-patch';
 
-import { DiffOutput, ValueOperation } from '../types';
+import { DiffOutput, ValueOperation, action } from '../types';
 
 /**
  * Formats the action to have one of `add`, `remove` or `edit` values
  * @param {String} action The action performed by the diff library
  * @returns {String} The formatted action output
  */
-export function formatAction(action: string): string {
+export function formatAction(action: string): action {
   if (action === 'replace') {
     return 'edit';
   }
   // since `add` and `remove` are already provided by the library, we don't need to change that.
-  return action;
+  return action as action;
 }
 
 /**
