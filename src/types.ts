@@ -1,21 +1,29 @@
 import { ReplaceOperation, AddOperation } from 'fast-json-patch';
 
-type ChangeType = 'breaking' | 'non-breaking' | 'unclassified';
+export type action = 'add' | 'remove' | 'edit';
+
+export type changes = 'breaking' | 'non-breaking' | 'unclassified';
+
+export interface Classifier {
+  add: changes;
+  remove: changes;
+  edit: changes;
+}
 
 export interface DiffOutput {
-  action: string;
+  action: action;
   path: string;
   isArrayIndex?: boolean;
   before?: any;
   after?: any;
 }
 
-export type OverrideObject = {
-  [key: string]: {
-    add: ChangeType;
-    remove: ChangeType;
-    edit: ChangeType;
-  };
+export type finalDiffChanges = DiffOutput & {
+  type: changes;
 };
+
+export interface finalOutput {
+  changes: finalDiffChanges[];
+}
 
 export type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
