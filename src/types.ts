@@ -1,6 +1,6 @@
 import { ReplaceOperation, AddOperation } from 'fast-json-patch';
 
-export type action = 'add' | 'remove' | 'edit';
+export type actionType = 'add' | 'remove' | 'edit';
 
 export type changes = 'breaking' | 'non-breaking' | 'unclassified';
 
@@ -11,7 +11,7 @@ export interface Classifier {
 }
 
 export interface DiffOutput {
-  action: action;
+  action: actionType;
   path: string;
   isArrayIndex?: boolean;
   before?: any;
@@ -22,7 +22,7 @@ export type finalDiffChanges = DiffOutput & {
   type: changes;
 };
 
-export interface finalOutput {
+export interface finalOutputType {
   changes: finalDiffChanges[];
 }
 
