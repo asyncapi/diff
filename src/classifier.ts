@@ -3,18 +3,7 @@
 // Also, since we are just using this object to access properties, its safe to disable security check for now.
 
 import { generateClassifierPath } from './helpers/ClassifierHelpers';
-
-const breaking = 'breaking';
-const nonBreaking = 'non-breaking';
-const unclassified = 'unclassified';
-
-type ChangeTypes = typeof breaking | typeof nonBreaking | typeof unclassified;
-
-interface Classifier {
-  add: ChangeTypes;
-  remove: ChangeTypes;
-  edit: ChangeTypes;
-}
+import { Classifier } from './types';
 
 /**
  * Gets the classifier object from the standard object using the provided path
@@ -26,9 +15,9 @@ export default function classifier(standard: any, path: string): Classifier {
   const classifierPath = generateClassifierPath(standard, path);
   if (!classifierPath) {
     return {
-      add: unclassified,
-      remove: unclassified,
-      edit: unclassified,
+      add: 'unclassified',
+      remove: 'unclassified',
+      edit: 'unclassified',
     };
   }
   return standard[classifierPath];
