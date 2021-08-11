@@ -1,11 +1,11 @@
-import AsyncAPIDiff from '../src/wrapper';
+import AsyncAPIDiff from '../src/asyncapidiff';
 
 import {
   breakingChanges,
   inputDiff,
   nonbreakingChanges,
   unclassifiedChanges,
-} from './fixtures/wrapper.fixture';
+} from './fixtures/asyncapidiff.fixtures';
 
 describe('AsyncAPIDiff wrapper', () => {
   test('checks the instance', () => {
