@@ -22,7 +22,7 @@ export type finalDiffChanges = DiffOutput & {
   type: changes;
 };
 
-export interface finalOutputType {
+export interface FinalOutputType {
   changes: finalDiffChanges[];
 }
 
