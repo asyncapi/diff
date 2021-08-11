@@ -10,6 +10,10 @@ export interface Classifier {
   edit: changes;
 }
 
+export interface OverrideObject {
+  [key: string]: Classifier;
+}
+
 export interface DiffOutput {
   action: actionType;
   path: string;
