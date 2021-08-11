@@ -1,5 +1,5 @@
 import classifier from './classifier';
-import { FinalOutputType, DiffOutput, finalDiffChanges } from './types';
+import { Output, DiffOutput, DiffOutputItem } from './types';
 
 /**
  * Categorize the changes
@@ -10,14 +10,14 @@ import { FinalOutputType, DiffOutput, finalDiffChanges } from './types';
 export default function categorizeChanges(
   standard: any,
   diffs: DiffOutput[]
-): FinalOutputType {
+): Output {
   // the final output
-  const output: FinalOutputType = {
+  const output: Output = {
     changes: [],
   };
 
   for (const diff of diffs) {
-    const newDiffObject = { ...diff } as finalDiffChanges;
+    const newDiffObject = { ...diff } as DiffOutputItem;
     const classifierObject = classifier(standard, diff.path);
     newDiffObject.type = classifierObject[diff.action] || 'unclassified';
     output.changes.push(newDiffObject);
