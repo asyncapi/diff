@@ -16,7 +16,7 @@ describe('AsyncAPIDiff wrapper', () => {
 
   test('checks the original output', () => {
     const diff = new AsyncAPIDiff(JSON.stringify(inputDiff));
-    expect(diff.json()).toEqual(inputDiff);
+    expect(diff.getOutput()).toEqual(inputDiff);
   });
 
   test('returns breaking changes', () => {
