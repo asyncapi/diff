@@ -1,6 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import { Output, DiffOutputItem } from './types';
 
+/**
+ * Implements functions to deal with the diff.
+ * @class
+ * @returns {AsyncAPIDiff}
+ */
 export default class AsyncAPIDiff {
   _json: Output;
 
