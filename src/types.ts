@@ -38,6 +38,5 @@ export interface OverrideObject {
 export type OverrideStandard = StandardType & OverrideObject;
 
 export interface Config {
-  parse?: boolean;
   override?: OverrideObject;
 }
