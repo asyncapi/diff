@@ -1,5 +1,8 @@
+import { parse } from '@asyncapi/parser';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
+
 import diff from '../src/diff';
-import { parser } from '../src/parser';
 
 import {
   firstDocument,
@@ -18,22 +21,27 @@ describe('Diff', () => {
   });
 
   test('Check diff output through parser with no difference', async () => {
-    const parsedData = await parser(
-      './test/spec/asyncapi.yml',
-      './test/spec/asyncapi.yml'
+    const specDocument = readFileSync(
+      resolve('./test/spec/asyncapi.yml'),
+      'utf-8'
     );
-    expect(
-      diff(parsedData.firstDocument.json(), parsedData.secondDocument.json())
-    ).toStrictEqual([]);
+    const firstDocument = await parse(specDocument);
+    expect(diff(firstDocument.json(), firstDocument.json())).toStrictEqual([]);
   });
 
   test('Check diff output through parser with difference input', async () => {
-    const parsedData = await parser(
-      './test/spec/asyncapi.yml',
-      './test/spec/diffSpec.yml'
+    const firstSpecDocument = readFileSync(
+      resolve('./test/spec/asyncapi.yml'),
+      'utf-8'
     );
-    expect(
-      diff(parsedData.firstDocument.json(), parsedData.secondDocument.json())
-    ).toStrictEqual(diffOutput);
+    const secondSpecDocument = readFileSync(
+      resolve('./test/spec/diffSpec.yml'),
+      'utf-8'
+    );
+    const firstDocument = await parse(firstSpecDocument);
+    const secondDocument = await parse(secondSpecDocument);
+    expect(diff(firstDocument.json(), secondDocument.json())).toStrictEqual(
+      diffOutput
+    );
   });
 });

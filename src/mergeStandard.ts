@@ -1,5 +1,4 @@
-import { StandardType } from './standard';
-import { OverrideObject } from './types';
+import { OverrideObject, StandardType } from './types';
 
 /**
  * Merges two standard objects

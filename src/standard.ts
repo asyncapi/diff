@@ -652,5 +652,3 @@ export const standard = {
     edit: nonBreaking,
   },
 };
-
-export type StandardType = typeof standard;

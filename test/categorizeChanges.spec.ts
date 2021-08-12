@@ -1,5 +1,5 @@
 import categorizeChanges from '../src/categorizeChanges';
-import { DiffOutput } from '../src/types';
+import { DiffOutput, OverrideStandard } from '../src/types';
 
 import {
   standard,
@@ -11,13 +11,16 @@ import {
 describe('categorizeChanges', () => {
   test('checks the final output', () => {
     expect(
-      categorizeChanges(standard, inputDiffOutput as DiffOutput[])
+      categorizeChanges(
+        standard as OverrideStandard,
+        inputDiffOutput as DiffOutput[]
+      )
     ).toStrictEqual(finalDiffOutput);
   });
 
   test('returns unclassified when passed with empty standard', () => {
     expect(
-      categorizeChanges({}, inputDiffOutput as DiffOutput[])
+      categorizeChanges({} as OverrideStandard, inputDiffOutput as DiffOutput[])
     ).toStrictEqual(finalDiffOutputAsUnclassified);
   });
 });

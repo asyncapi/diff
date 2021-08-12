@@ -1,4 +1,6 @@
 import classifier from '../src/classifier';
+import { OverrideStandard } from '../src/types';
+
 import {
   correctClassification,
   demoStandard,
@@ -7,24 +9,26 @@ import {
 
 describe('classifier', () => {
   test('should return unclassified in case of empty standard', () => {
-    expect(classifier({}, '/some/path')).toStrictEqual(unclassifiedChange);
+    expect(classifier({} as OverrideStandard, '/some/path')).toStrictEqual(
+      unclassifiedChange
+    );
   });
 
   test('should return the correct classification with correct path', () => {
-    expect(classifier(demoStandard, '/servers')).toStrictEqual(
-      correctClassification
-    );
+    expect(
+      classifier(demoStandard as OverrideStandard, '/servers')
+    ).toStrictEqual(correctClassification);
   });
 
   test('should return the correct classification with placeholder path', () => {
-    expect(classifier(demoStandard, '/servers/google')).toStrictEqual(
-      correctClassification
-    );
+    expect(
+      classifier(demoStandard as OverrideStandard, '/servers/google')
+    ).toStrictEqual(correctClassification);
   });
 
   test('should return the correct classification with placeholder path', () => {
-    expect(classifier(demoStandard, '/servers/google/protocol')).toStrictEqual(
-      correctClassification
-    );
+    expect(
+      classifier(demoStandard as OverrideStandard, '/servers/google/protocol')
+    ).toStrictEqual(correctClassification);
   });
 });

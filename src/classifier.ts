@@ -1,9 +1,9 @@
 /* eslint-disable security/detect-object-injection */
-// Disabling this since the object from which we are accessing the properties won't have any prototype chain.
-// Also, since we are just using this object to access properties, its safe to disable security check for now.
+// Disabling this since the property we are accessing will always have `/` as the prefix
+// Thus preventing the prototype chain attacks
 
 import { generateClassifierPath } from './helpers/ClassifierHelpers';
-import { Classifier } from './types';
+import { Classifier, OverrideStandard } from './types';
 
 /**
  * Gets the classifier object from the standard object using the provided path
@@ -11,7 +11,10 @@ import { Classifier } from './types';
  * @param path The JSONpointer path provided by the diff
  * @returns The classifier object containing `add`, `remove` & `edit` properties
  */
-export default function classifier(standard: any, path: string): Classifier {
+export default function classifier(
+  standard: OverrideStandard,
+  path: string
+): Classifier {
   const classifierPath = generateClassifierPath(standard, path);
   if (!classifierPath) {
     return {
