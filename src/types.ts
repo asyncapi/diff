@@ -1,12 +1,6 @@
 import { ReplaceOperation, AddOperation } from 'fast-json-patch';
-import { AsyncAPIDocument } from '@asyncapi/parser';
 
 import { standard } from './standard';
-
-export interface ParsedOutput {
-  firstDocument: AsyncAPIDocument;
-  secondDocument: AsyncAPIDocument;
-}
 
 export type ActionType = 'add' | 'remove' | 'edit';
 
