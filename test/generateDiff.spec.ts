@@ -2,7 +2,7 @@ import { parse } from '@asyncapi/parser';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
-import generateDiff from '../src/diff';
+import generateDiff from '../src/generateDiff';
 
 import {
   firstDocument,

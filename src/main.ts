@@ -1,5 +1,5 @@
 import { Config, OverrideStandard } from './types';
-import generateDiff from './diff';
+import generateDiff from './generateDiff';
 import { standard } from './standard';
 import categorizeChanges from './categorizeChanges';
 import AsyncAPIDiff from './asyncapidiff';
