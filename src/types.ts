@@ -1,4 +1,12 @@
 import { ReplaceOperation, AddOperation } from 'fast-json-patch';
+import { AsyncAPIDocument } from '@asyncapi/parser';
+
+import { standard } from './standard';
+
+export interface ParsedOutput {
+  firstDocument: AsyncAPIDocument;
+  secondDocument: AsyncAPIDocument;
+}
 
 export type ActionType = 'add' | 'remove' | 'edit';
 
@@ -8,10 +16,6 @@ export interface Classifier {
   add: ChangeType;
   remove: ChangeType;
   edit: ChangeType;
-}
-
-export interface OverrideObject {
-  [key: string]: Classifier;
 }
 
 export interface DiffOutput {
@@ -31,3 +35,15 @@ export interface Output {
 }
 
 export type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
+
+export type StandardType = typeof standard;
+export interface OverrideObject {
+  [key: string]: Classifier;
+}
+
+export type OverrideStandard = StandardType & OverrideObject;
+
+export interface Config {
+  parse?: boolean;
+  override?: OverrideObject;
+}

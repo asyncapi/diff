@@ -1,6 +1,8 @@
 /* eslint-disable security/detect-object-injection */
-// Disabling this since the standard object we will pass will have no prototype chain
-// thus, it will return undefined for properties not present in the object itself
+// Disabling this since the property we are accessing will always have `/` as the prefix
+// Thus preventing the prototype chain attacks
+
+import { OverrideStandard } from '../types';
 
 /**
  * Changes the last element of array to `*`
@@ -23,7 +25,7 @@ export function changeLastElementToPlaceholder(path: string[]): string {
  * @returns The path found
  */
 export function generateClassifierPath(
-  standard: any,
+  standard: OverrideStandard,
   path: string
 ): string | undefined {
   // See this PR for a detailed walkthrough of this code with an example: https://github.com/asyncapi/diff/pull/19

@@ -1,5 +1,5 @@
 import classifier from './classifier';
-import { Output, DiffOutput, DiffOutputItem } from './types';
+import { Output, DiffOutput, DiffOutputItem, OverrideStandard } from './types';
 
 /**
  * Categorize the changes
@@ -8,7 +8,7 @@ import { Output, DiffOutput, DiffOutputItem } from './types';
  * @returns The final output containing the diff changes as well as the type of change
  */
 export default function categorizeChanges(
-  standard: any,
+  standard: OverrideStandard,
   diffs: DiffOutput[]
 ): Output {
   // the final output

@@ -1,10 +1,7 @@
-import { AsyncAPIDocument, parse, parseFromUrl } from '@asyncapi/parser';
-import { isUrl, readDocument } from './utils';
+import { parse, parseFromUrl } from '@asyncapi/parser';
 
-export interface ParsedOutput {
-  firstDocument: AsyncAPIDocument;
-  secondDocument: AsyncAPIDocument;
-}
+import { isUrl, readDocument } from './utils';
+import { ParsedOutput } from './types';
 
 /**
  * Parses two AsyncAPI documents
@@ -27,6 +24,9 @@ export async function parser(
  * @returns {Promise<AsyncAPIDocument>} The parsed AsyncAPI document
  */
 async function parseDocument(path: string) {
+  if (typeof path !== 'string') {
+    throw new TypeError('Path must be a string');
+  }
   if (isUrl(path)) {
     return parseFromUrl(path);
   }
