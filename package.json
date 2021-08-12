@@ -33,7 +33,6 @@
   },
   "homepage": "https://github.com/asyncapi/diff#readme",
   "dependencies": {
-    "@asyncapi/parser": "^1.5.1",
     "fast-json-patch": "^3.0.0-1"
   },
   "devDependencies": {
