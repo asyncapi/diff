@@ -32,3 +32,86 @@ export const diffLocalOutput = [
     after: 'production-dev',
   },
 ];
+
+export const diffOutput = [
+  {
+    action: 'remove',
+    path: '/channels/mychannel',
+    before: {
+      publish: {
+        message: {
+          headers: {
+            properties: {
+              'some-common-header': {
+                type: 'string',
+                'x-parser-schema-id': '<anonymous-schema-2>',
+              },
+            },
+            type: 'object',
+            'x-parser-schema-id': '<anonymous-schema-1>',
+          },
+          schemaFormat: 'application/vnd.aai.asyncapi;version=2.0.0',
+          'x-parser-message-name': 'channelMessage',
+          'x-parser-message-parsed': true,
+          'x-parser-original-traits': [
+            {
+              headers: {
+                properties: {
+                  'some-common-header': {
+                    type: 'string',
+                  },
+                },
+                type: 'object',
+              },
+              'x-some-extension': 'some extension',
+            },
+          ],
+          'x-some-extension': 'some extension',
+        },
+      },
+    },
+  },
+  {
+    action: 'add',
+    path: '/channels/anotherChannel',
+    after: {
+      publish: {
+        message: {
+          headers: {
+            properties: {
+              'some-common-header': {
+                type: 'string',
+                'x-parser-schema-id': '<anonymous-schema-2>',
+              },
+            },
+            type: 'object',
+            'x-parser-schema-id': '<anonymous-schema-1>',
+          },
+          schemaFormat: 'application/vnd.aai.asyncapi;version=2.0.0',
+          'x-parser-message-name': 'channelMessage',
+          'x-parser-message-parsed': true,
+          'x-parser-original-traits': [
+            {
+              headers: {
+                properties: {
+                  'some-common-header': {
+                    type: 'string',
+                  },
+                },
+                type: 'object',
+              },
+              'x-some-extension': 'some extension',
+            },
+          ],
+          'x-some-extension': 'some extension',
+        },
+      },
+    },
+  },
+  {
+    action: 'edit',
+    path: '/info/version',
+    after: '1.1.0',
+    before: '1.0.0',
+  },
+];
