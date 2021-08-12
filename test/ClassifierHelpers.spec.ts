@@ -2,6 +2,8 @@ import {
   changeLastElementToPlaceholder,
   generateClassifierPath,
 } from '../src/helpers/ClassifierHelpers';
+import { OverrideStandard } from '../src/types';
+
 import { demoStandard } from './fixtures/classifier.fixtures';
 import { pathAsArray } from './fixtures/ClassifierHelpers.fixtures';
 
@@ -17,28 +19,41 @@ describe('changeLastElementToPlaceholder function', () => {
 
 describe('generateClassifierPath function', () => {
   test('should return undefined when passed an empty standard', () => {
-    expect(generateClassifierPath({}, '/')).toEqual(undefined);
-  });
-
-  test('should return correct path', () => {
-    expect(generateClassifierPath(demoStandard, '/servers')).toBe('/servers');
-  });
-
-  test('should return correct path', () => {
-    expect(generateClassifierPath(demoStandard, '/servers/google')).toBe(
-      '/servers/*'
+    expect(generateClassifierPath({} as OverrideStandard, '/')).toEqual(
+      undefined
     );
+  });
+
+  test('should return correct path', () => {
+    expect(
+      generateClassifierPath(demoStandard as OverrideStandard, '/servers')
+    ).toBe('/servers');
+  });
+
+  test('should return correct path', () => {
+    expect(
+      generateClassifierPath(
+        demoStandard as OverrideStandard,
+        '/servers/google'
+      )
+    ).toBe('/servers/*');
   });
 
   test('shold return undefined for non-existing path', () => {
     expect(
-      generateClassifierPath(demoStandard, '/servers/google/someProperty')
+      generateClassifierPath(
+        demoStandard as OverrideStandard,
+        '/servers/google/someProperty'
+      )
     ).toEqual(undefined);
   });
 
   test('shold return correct path', () => {
     expect(
-      generateClassifierPath(demoStandard, '/servers/google/protocol')
+      generateClassifierPath(
+        demoStandard as OverrideStandard,
+        '/servers/google/protocol'
+      )
     ).toBe('/servers/*/protocol');
   });
 });
