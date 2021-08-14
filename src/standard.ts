@@ -126,6 +126,11 @@ export const standard = {
     remove: breaking,
     edit: breaking,
   },
+  '/servers/*/variables/*/enum/*': {
+    add: nonBreaking,
+    remove: breaking,
+    edit: breaking,
+  },
   '/servers/*/variables/*/default': {
     add: breaking,
     remove: breaking,
@@ -141,7 +146,17 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/servers/*/variables/*/examples/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/servers/*/security': {
+    add: breaking,
+    remove: breaking,
+    edit: breaking,
+  },
+  '/servers/*/security/*': {
     add: breaking,
     remove: breaking,
     edit: breaking,
@@ -196,6 +211,11 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/subscribe/tags/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/subscribe/externalDocs': {
     add: nonBreaking,
     remove: nonBreaking,
@@ -207,6 +227,11 @@ export const standard = {
     edit: unclassified,
   },
   '/channels/*/subscribe/traits': {
+    add: nonBreaking,
+    remove: breaking,
+    edit: breaking,
+  },
+  '/channels/*/subscribe/traits/*': {
     add: nonBreaking,
     remove: breaking,
     edit: breaking,
@@ -227,6 +252,11 @@ export const standard = {
     edit: nonBreaking,
   },
   '/channels/*/subscribe/traits/tags': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
+  '/channels/*/subscribe/traits/tags/*': {
     add: nonBreaking,
     remove: nonBreaking,
     edit: nonBreaking,
@@ -296,6 +326,11 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/subscribe/message/tags/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/subscribe/message/externalDocs': {
     add: nonBreaking,
     remove: nonBreaking,
@@ -311,7 +346,17 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/subscribe/message/examples/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/subscribe/message/traits': {
+    add: nonBreaking,
+    remove: breaking,
+    edit: breaking,
+  },
+  '/channels/*/subscribe/message/traits/*': {
     add: nonBreaking,
     remove: breaking,
     edit: breaking,
@@ -366,6 +411,11 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/subscribe/message/traits/tags/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/subscribe/message/traits/externalDocs': {
     add: nonBreaking,
     remove: nonBreaking,
@@ -377,6 +427,11 @@ export const standard = {
     edit: unclassified,
   },
   '/channels/*/subscribe/message/traits/examples': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
+  '/channels/*/subscribe/message/traits/examples/*': {
     add: nonBreaking,
     remove: nonBreaking,
     edit: nonBreaking,
@@ -416,6 +471,11 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/publish/tags/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/publish/externalDocs': {
     add: nonBreaking,
     remove: nonBreaking,
@@ -427,6 +487,11 @@ export const standard = {
     edit: unclassified,
   },
   '/channels/*/publish/traits': {
+    add: nonBreaking,
+    remove: breaking,
+    edit: breaking,
+  },
+  '/channels/*/publish/traits/*': {
     add: nonBreaking,
     remove: breaking,
     edit: breaking,
@@ -447,6 +512,11 @@ export const standard = {
     edit: nonBreaking,
   },
   '/channels/*/publish/traits/tags': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
+  '/channels/*/publish/traits/tags/*': {
     add: nonBreaking,
     remove: nonBreaking,
     edit: nonBreaking,
@@ -516,6 +586,11 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/publish/message/tags/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/publish/message/externalDocs': {
     add: nonBreaking,
     remove: nonBreaking,
@@ -531,7 +606,17 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/publish/message/examples/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/publish/message/traits': {
+    add: nonBreaking,
+    remove: breaking,
+    edit: breaking,
+  },
+  '/channels/*/publish/message/traits/*': {
     add: nonBreaking,
     remove: breaking,
     edit: breaking,
@@ -586,6 +671,11 @@ export const standard = {
     remove: nonBreaking,
     edit: nonBreaking,
   },
+  '/channels/*/publish/message/traits/tags/*': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
   '/channels/*/publish/message/traits/externalDocs': {
     add: nonBreaking,
     remove: nonBreaking,
@@ -597,6 +687,11 @@ export const standard = {
     edit: unclassified,
   },
   '/channels/*/publish/message/traits/examples': {
+    add: nonBreaking,
+    remove: nonBreaking,
+    edit: nonBreaking,
+  },
+  '/channels/*/publish/message/traits/examples/*': {
     add: nonBreaking,
     remove: nonBreaking,
     edit: nonBreaking,

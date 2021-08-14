@@ -305,7 +305,7 @@ export const arrayChanges = {
   changes: [
     {
       path: '/servers/google/variables/port/enum/1',
-      type: 'unclassified',
+      type: 'breaking',
       isArrayIndex: true,
       action: 'remove',
       before: 2,
