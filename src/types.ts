@@ -1,10 +1,14 @@
 import { ReplaceOperation, AddOperation } from 'fast-json-patch';
 
 import { standard } from './standard';
+import { breaking, nonBreaking, unclassified } from './constants';
 
 export type ActionType = 'add' | 'remove' | 'edit';
 
-export type ChangeType = 'breaking' | 'non-breaking' | 'unclassified';
+export type ChangeType =
+  | typeof breaking
+  | typeof nonBreaking
+  | typeof unclassified;
 
 export interface Classifier {
   add: ChangeType;

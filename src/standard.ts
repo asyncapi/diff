@@ -1,6 +1,4 @@
-const breaking = 'breaking';
-const nonBreaking = 'non-breaking';
-const unclassified = 'unclassified';
+import { breaking, nonBreaking, unclassified } from './constants';
 
 /**
  * The standard object
