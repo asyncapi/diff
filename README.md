@@ -17,8 +17,11 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Overriding the built-in standard](#overriding-the-built-in-standard)
+- [Standard object](#standard-object)
+  - [Overriding the standard](#overriding-the-standard)
+- [Example](#example)
 - [API](#api)
+- [Develop](#develop)
 - [Contributing](#contributing)
 
 <!-- tocstop -->
@@ -43,9 +46,15 @@ const output = diff(firstDocument, secondDocument, {
 });
 ```
 
-### Overriding the built-in standard
+## Standard object
 
-To understand the format of overriding object, take a look at [this](standard.md) document.
+This library has a pre-configured standard which marks a change as `breaking`, `non-breaking` or `unclassified`. This standard data is stored as an object inside the [`standard.ts`](https://github.com/asyncapi/diff/blob/master/src/standard.ts) file.
+
+The format of this standard object is explained in [this](standard-format.md) document.
+
+### Overriding the standard
+
+To understand the format of overriding object, take a look at [this](standard-format.md) document.
 
 The overrides object must be passed in the following format:
 
@@ -59,7 +68,22 @@ The overrides object must be passed in the following format:
 }
 ```
 
-Example:
+## Example
+
+See the [API](API.md) document to get all the helper methods this library offers.
+
+1. Without any overrides
+
+```js
+const output = diff(firstDocument, secondDocument);
+
+output.getOutput(); // the whole output data
+output.breaking(); // the breaking changes
+output.nonBreaking(); // the non-breaking changes
+output.unclassified(); // the unclassified changes
+```
+
+2. With overrides
 
 ```js
 const output = diff(firstDocument, secondDocument, {
@@ -75,7 +99,13 @@ const output = diff(firstDocument, secondDocument, {
 
 ## API
 
-Checkout the [APIs](API.md) document to see all the APIs this library offers.
+Checkout the [API](API.md) document to see all the APIs this library offers.
+
+## Develop
+
+1. Write code and tests
+2. Make sure all tests pass `npm run test`
+3. Make sure code is well formatted and secure `npm run lint`
 
 ## Contributing
 

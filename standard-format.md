@@ -2,8 +2,6 @@
 
 This library depends on a "standard" which classifies a certain change as `breaking`, `non-breaking` or `unclassified`.
 
-This data is stored as an object inside the [`standard.ts`](https://github.com/asyncapi/diff/blob/master/src/standard.ts) file.
-
 This object has the following structure:
 
 ```
@@ -22,8 +20,8 @@ Example:
 
 ```yml
 info:
-	license:
-		name: Apache 2.0
+  license:
+    name: Apache 2.0
 ```
 
 The jsonPointer to the `name` will be `/info/license/name`.
@@ -62,8 +60,8 @@ For example,
 
 ```yml
 servers:
-	google:
-		protocol: https
+  google:
+    protocol: https
 ```
 
 The AsyncAPI spec says that the server name(in this case `google`) is a patterned field. It can be `google`, `bing` or whatever the user wants.
@@ -78,8 +76,8 @@ For example,
 
 ```yml
 servers:
-	google:
-		ports: [3000, 8000] # This is an example. Such property doesn't exist in the spec at this time
+  google:
+    ports: [3000, 8000] # This is an example. Such property doesn't exist in the spec at this time
 ```
 
 Removing `8000` from `ports` will result in change path as `/servers/google/ports/2`.
