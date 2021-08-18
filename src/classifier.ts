@@ -2,6 +2,7 @@
 // Disabling this since the property we are accessing will always have `/` as the prefix
 // Thus preventing the prototype chain attacks
 
+import { unclassified } from './constants';
 import { generateClassifierPath } from './helpers/ClassifierHelpers';
 import { Classifier, OverrideStandard } from './types';
 
@@ -18,9 +19,9 @@ export default function classifier(
   const classifierPath = generateClassifierPath(standard, path);
   if (!classifierPath) {
     return {
-      add: 'unclassified',
-      remove: 'unclassified',
-      edit: 'unclassified',
+      add: unclassified,
+      remove: unclassified,
+      edit: unclassified,
     };
   }
   return standard[classifierPath];

@@ -9,7 +9,7 @@ import { DiffOutput } from './types';
  * @param {*} secondDocument The second document in JSON format
  * @returns {DiffOutput[]} An array containing all the diffs
  */
-export default function diff(
+export default function generateDiff(
   firstDocument: any,
   secondDocument: any
 ): DiffOutput[] {
