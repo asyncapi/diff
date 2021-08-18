@@ -32,7 +32,7 @@ And each `jsonPointerPath` will have 3 properties. `add`, `remove` and `edit`, t
 2. `remove` - An existing property has been deleted.
 3. `edit` - An existing property has been modified.
 
-and these 3 properties will have any one of the acceptable values.
+and each property can be `breaking`, `non-breaking` or `unclassified`.
 
 1. `breaking` to consider a change as breaking change.
 2. `non-breaking` to consider a change as non-breaking change.
@@ -52,9 +52,9 @@ Here's an example from the `standard.ts` file:
 
 ## Working with patterned fields
 
-Since the AsyncAPI specifications allows the use of patterned fields, and these patterned fields differs from spec to spec.
+Since the AsyncAPI specifications allow the use of patterned fields, and these patterned fields differ from spec to spec.
 
-Therefore, to overcome this issue, we came up `*`. The `*` will match any pattern it will get.
+Therefore, to overcome this issue, we came up `*` wildcard. The `*` will match any pattern it will get.
 
 For example,
 

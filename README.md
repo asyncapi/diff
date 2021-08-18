@@ -5,7 +5,7 @@
 </h5>
 <p align="center">
   <em>
-  AsyncDiff is a library which compares two AsyncAPI Documents and provides information about the differences by pointing out explicitly informations like breaking changes.
+  AsyncDiff is a library that compares two AsyncAPI files and provides information about the differences by pointing out explicitly information like breaking changes.
   </em>
 </p>
 
@@ -34,7 +34,7 @@ npm install @asyncapi/diff
 
 ## Usage
 
-**NOTE:** The library doesn't have a built-in parser to parse the given AsyncAPI document. Thus, users have to make sure they provide the valid & dereferenced AsyncAPI document as the input. Users can use the [AsyncAPI parser](https://github.com/asyncapi/parser-js) to parse the document, or they can use other tools. Though they **must** make sure that the document is valid & dereferenced in case they use other tools to parse the documents.
+**NOTE:** The library doesn't have a built-in parser to parse the given AsyncAPI document. Thus, you have to make sure they provide the valid & dereferenced AsyncAPI document as an input. You can use the [AsyncAPI parser](https://github.com/asyncapi/parser-js) to parse and validate the AsyncAPI file first. You can use other tools, but you **must** make sure that the document is valid and dereferenced.
 
 ```js
 import { diff } from '@asyncapi/diff'; // const { diff } = require('@asyncapi/diff');
