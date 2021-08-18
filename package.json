@@ -7,7 +7,7 @@
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
-    "docs": "jsdoc2md lib/main.js -f lib/**/*.js > API.md",
+    "docs": "jsdoc2md lib/index.js -f lib/*.js > API.md",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",

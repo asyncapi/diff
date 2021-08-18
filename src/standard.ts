@@ -2,6 +2,8 @@ import { breaking, nonBreaking, unclassified } from './constants';
 
 /**
  * The standard object
+ *
+ * @private
  */
 export const standard = {
   '/asyncapi': {

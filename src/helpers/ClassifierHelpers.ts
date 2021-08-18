@@ -11,6 +11,8 @@ import { OverrideStandard } from '../types';
  *
  * @example
  * changeLastElementToPlaceholder(['', 'servers', 'production']); // '/servers/*'
+ *
+ * @private
  */
 export function changeLastElementToPlaceholder(path: string[]): string {
   path.pop();
@@ -23,6 +25,8 @@ export function changeLastElementToPlaceholder(path: string[]): string {
  * @param standard The standard object
  * @param path The JSONpointer path to find
  * @returns The path found
+ *
+ * @private
  */
 export function generateClassifierPath(
   standard: OverrideStandard,

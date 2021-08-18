@@ -18,6 +18,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
   - [Overriding the built-in standard](#overriding-the-built-in-standard)
+- [API](#api)
 - [Contributing](#contributing)
 
 <!-- tocstop -->
@@ -71,6 +72,10 @@ const output = diff(firstDocument, secondDocument, {
   },
 });
 ```
+
+## API
+
+Checkout the [APIs](API.md) document to see all the APIs this library offers.
 
 ## Contributing
 

@@ -2,7 +2,7 @@ import { Output, DiffOutputItem } from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
 
 /**
- * Implements functions to deal with the diff.
+ * Implements methods to deal with diff output.
  * @class
  * @returns {AsyncAPIDiff}
  */

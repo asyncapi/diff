@@ -11,6 +11,8 @@ import { Classifier, OverrideStandard } from './types';
  * @param standard The standard object
  * @param path The JSONpointer path provided by the diff
  * @returns The classifier object containing `add`, `remove` & `edit` properties
+ *
+ * @private
  */
 export default function classifier(
   standard: OverrideStandard,
