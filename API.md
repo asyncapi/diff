@@ -22,31 +22,31 @@ Implements methods to deal with diff output.
 **Kind**: global class  
 
 * [AsyncAPIDiff](#AsyncAPIDiff)
-    * [.breaking()](#AsyncAPIDiff+breaking) ⇒
-    * [.nonBreaking()](#AsyncAPIDiff+nonBreaking) ⇒
-    * [.unclassified()](#AsyncAPIDiff+unclassified) ⇒
-    * [.getOutput()](#AsyncAPIDiff+getOutput) ⇒
+    * [.breaking()](#AsyncAPIDiff+breaking) ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
+    * [.nonBreaking()](#AsyncAPIDiff+nonBreaking) ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
+    * [.unclassified()](#AsyncAPIDiff+unclassified) ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
+    * [.getOutput()](#AsyncAPIDiff+getOutput) ⇒ <code>Output</code>
 
 <a name="AsyncAPIDiff+breaking"></a>
 
-### asyncAPIDiff.breaking() ⇒
+### asyncAPIDiff.breaking() ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
 **Kind**: instance method of [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)  
-**Returns**: All the breaking changes  
+**Returns**: <code>Array.&lt;DiffOutputItem&gt;</code> - All the breaking changes  
 <a name="AsyncAPIDiff+nonBreaking"></a>
 
-### asyncAPIDiff.nonBreaking() ⇒
+### asyncAPIDiff.nonBreaking() ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
 **Kind**: instance method of [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)  
-**Returns**: All the non-breaking changes  
+**Returns**: <code>Array.&lt;DiffOutputItem&gt;</code> - All the non-breaking changes  
 <a name="AsyncAPIDiff+unclassified"></a>
 
-### asyncAPIDiff.unclassified() ⇒
+### asyncAPIDiff.unclassified() ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
 **Kind**: instance method of [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)  
-**Returns**: All the unclassified changes  
+**Returns**: <code>Array.&lt;DiffOutputItem&gt;</code> - All the unclassified changes  
 <a name="AsyncAPIDiff+getOutput"></a>
 
-### asyncAPIDiff.getOutput() ⇒
+### asyncAPIDiff.getOutput() ⇒ <code>Output</code>
 **Kind**: instance method of [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)  
-**Returns**: The JSON output  
+**Returns**: <code>Output</code> - The JSON output  
 <a name="diff"></a>
 
 ## diff(firstDocument, secondDocument, config) ⇒ [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)
