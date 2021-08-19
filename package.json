@@ -16,7 +16,8 @@
     "get:name": "echo $npm_package_name",
     "generate:assets": "npm run build",
     "bump:version": "npm --no-git-tag-version --allow-same-version version $VERSION",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
