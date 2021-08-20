@@ -6,6 +6,8 @@ import { DiffOutput, ValueOperation, ActionType } from '../types';
  * Formats the action to have one of `add`, `remove` or `edit` values
  * @param {String} action The action performed by the diff library
  * @returns {String} The formatted action output
+ *
+ * @private
  */
 export function formatAction(action: string): ActionType {
   if (action === 'replace') {
@@ -20,6 +22,8 @@ export function formatAction(action: string): ActionType {
  * @param firstDocument The first document which we will get the before value from
  * @param {String} path The path from where we can get the value
  * @returns The value from the first document
+ *
+ * @private
  */
 export function getBeforeValue(firstDocument: any, path: string): any {
   // since our current diffing library doesn't provide the `before` value
@@ -31,6 +35,8 @@ export function getBeforeValue(firstDocument: any, path: string): any {
  * Get the `after` value
  * @param diffObject A single diff object
  * @returns The value that is present inside the second document
+ *
+ * @private
  */
 export function getAfterValue(diffObject: Operation): any {
   // The diffing library already provides the `after` value for `add` or `edit` actions
@@ -41,6 +47,8 @@ export function getAfterValue(diffObject: Operation): any {
  * Sets the index property in case of an array change
  * @param changeObject The change object
  * @param {String} path The original path
+ *
+ * @private
  */
 export function setIndex(
   changeObject: DiffOutput,
@@ -68,6 +76,8 @@ export function setIndex(
  * @param {Operation[]} diff The original diff array
  * @param {*} firstDocument The first document
  * @returns {DiffOutput[]} The modified diffs array
+ *
+ * @private
  */
 export function formatDiffOutput(
   diffInput: Operation[],

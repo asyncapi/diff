@@ -2,7 +2,7 @@ import { Output, DiffOutputItem } from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
 
 /**
- * Implements functions to deal with the diff.
+ * Implements methods to deal with diff output.
  * @class
  * @returns {AsyncAPIDiff}
  */
@@ -15,28 +15,28 @@ export default class AsyncAPIDiff {
   }
 
   /**
-   * @returns All the breaking changes
+   * @returns {Array<DiffOutputItem>} All the breaking changes
    */
   breaking(): DiffOutputItem[] {
     return this.output.changes.filter((diff) => diff.type === breaking);
   }
 
   /**
-   * @returns All the non-breaking changes
+   * @returns {Array<DiffOutputItem>} All the non-breaking changes
    */
   nonBreaking(): DiffOutputItem[] {
     return this.output.changes.filter((diff) => diff.type === nonBreaking);
   }
 
   /**
-   * @returns All the unclassified changes
+   * @returns {Array<DiffOutputItem>} All the unclassified changes
    */
   unclassified(): DiffOutputItem[] {
     return this.output.changes.filter((diff) => diff.type === unclassified);
   }
 
   /**
-   * @returns The JSON output
+   * @returns {Output}  The JSON output
    */
   getOutput(): Output {
     return this.output;

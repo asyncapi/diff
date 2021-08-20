@@ -6,6 +6,8 @@ import { Output, DiffOutput, DiffOutputItem, OverrideStandard } from './types';
  * @param standard The standard object
  * @param diffs The array of diff changes
  * @returns The final output containing the diff changes as well as the type of change
+ *
+ * @private
  */
 export default function categorizeChanges(
   standard: OverrideStandard,
