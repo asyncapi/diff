@@ -1,9 +1,14 @@
 {
   "name": "@asyncapi/diff",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "AsyncDiff is a library which compares two AsyncAPI Documents and provides information about the differences by pointing out explicitly informations like breaking changes.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": [
+    "/lib",
+    "./README.md",
+    "./LICENSE"
+  ],
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
@@ -18,7 +23,8 @@
     "generate:readme:toc": "markdown-toc -i README.md",
     "generate:assets": "npm run build && npm run docs && npm run generate:readme:toc",
     "bump:version": "npm --no-git-tag-version --allow-same-version version $VERSION",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
