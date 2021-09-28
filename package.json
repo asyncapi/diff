@@ -44,7 +44,7 @@
     "fast-json-patch": "^3.0.0-1"
   },
   "devDependencies": {
-    "@asyncapi/parser": "^1.9.1",
+    "@asyncapi/parser": "^1.10.0",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/github": "^7.2.3",
     "@semantic-release/npm": "^7.1.3",
