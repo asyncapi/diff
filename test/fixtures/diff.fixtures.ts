@@ -59,9 +59,11 @@ export const diffOutput = [
                 properties: {
                   'some-common-header': {
                     type: 'string',
+                    "x-parser-schema-id": "<anonymous-schema-7>"
                   },
                 },
                 type: 'object',
+                "x-parser-schema-id": "<anonymous-schema-6>"
               },
               'x-some-extension': 'some extension',
             },
@@ -96,9 +98,11 @@ export const diffOutput = [
                 properties: {
                   'some-common-header': {
                     type: 'string',
+                    "x-parser-schema-id": "<anonymous-schema-7>"
                   },
                 },
                 type: 'object',
+                "x-parser-schema-id": "<anonymous-schema-6>"
               },
               'x-some-extension': 'some extension',
             },
