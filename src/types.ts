@@ -24,6 +24,9 @@ export interface DiffOutput {
   after?: any;
 }
 
+/**
+ * @typedef {DiffOutput}
+ */
 export type DiffOutputItem = DiffOutput & {
   type: ChangeType;
 };

@@ -14,6 +14,13 @@
 </dd>
 </dl>
 
+## Typedefs
+
+<dl>
+<dt><a href="#DiffOutputItem">DiffOutputItem</a> : <code>Output</code></dt>
+<dd></dd>
+</dl>
+
 <a name="AsyncAPIDiff"></a>
 
 ## AsyncAPIDiff
@@ -22,26 +29,26 @@ Implements methods to deal with diff output.
 **Kind**: global class  
 
 * [AsyncAPIDiff](#AsyncAPIDiff)
-    * [.breaking()](#AsyncAPIDiff+breaking) ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
-    * [.nonBreaking()](#AsyncAPIDiff+nonBreaking) ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
-    * [.unclassified()](#AsyncAPIDiff+unclassified) ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
+    * [.breaking()](#AsyncAPIDiff+breaking) ⇒ [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem)
+    * [.nonBreaking()](#AsyncAPIDiff+nonBreaking) ⇒ [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem)
+    * [.unclassified()](#AsyncAPIDiff+unclassified) ⇒ [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem)
     * [.getOutput()](#AsyncAPIDiff+getOutput) ⇒ <code>Output</code>
 
 <a name="AsyncAPIDiff+breaking"></a>
 
-### asyncAPIDiff.breaking() ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
+### asyncAPIDiff.breaking() ⇒ [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem)
 **Kind**: instance method of [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)  
-**Returns**: <code>Array.&lt;DiffOutputItem&gt;</code> - All the breaking changes  
+**Returns**: [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem) - All the breaking changes  
 <a name="AsyncAPIDiff+nonBreaking"></a>
 
-### asyncAPIDiff.nonBreaking() ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
+### asyncAPIDiff.nonBreaking() ⇒ [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem)
 **Kind**: instance method of [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)  
-**Returns**: <code>Array.&lt;DiffOutputItem&gt;</code> - All the non-breaking changes  
+**Returns**: [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem) - All the non-breaking changes  
 <a name="AsyncAPIDiff+unclassified"></a>
 
-### asyncAPIDiff.unclassified() ⇒ <code>Array.&lt;DiffOutputItem&gt;</code>
+### asyncAPIDiff.unclassified() ⇒ [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem)
 **Kind**: instance method of [<code>AsyncAPIDiff</code>](#AsyncAPIDiff)  
-**Returns**: <code>Array.&lt;DiffOutputItem&gt;</code> - All the unclassified changes  
+**Returns**: [<code>Array.&lt;DiffOutputItem&gt;</code>](#DiffOutputItem) - All the unclassified changes  
 <a name="AsyncAPIDiff+getOutput"></a>
 
 ### asyncAPIDiff.getOutput() ⇒ <code>Output</code>
@@ -74,3 +81,7 @@ const output = diff(firstDocument, secondDocument, {
  }
 })
 ```
+<a name="DiffOutputItem"></a>
+
+## DiffOutputItem : <code>Output</code>
+**Kind**: global typedef  

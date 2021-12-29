@@ -2,6 +2,11 @@ import { Output, DiffOutputItem } from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
 
 /**
+ * @typedef {import('./types').Output} Output
+ * @typedef {import('./types').DiffOutputItem} DiffOutputItem
+ */
+
+/**
  * Implements methods to deal with diff output.
  * @class
  * @returns {AsyncAPIDiff}
