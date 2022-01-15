@@ -24,9 +24,6 @@ export interface DiffOutput {
   after?: any;
 }
 
-/**
- * @typedef {DiffOutput}
- */
 export type DiffOutputItem = DiffOutput & {
   type: ChangeType;
 };
@@ -38,6 +35,7 @@ export interface Output {
 export type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
 
 export type StandardType = typeof standard;
+
 export interface OverrideObject {
   [key: string]: Classifier;
 }

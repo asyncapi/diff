@@ -6,8 +6,8 @@ import { breaking, nonBreaking, unclassified } from './constants';
  * */
 
 /**
- * @typedef {import('./types').DiffOutput} DiffOutput
- */
+ * @typedef {import('./types').DiffOutputItem} DiffOutputItem
+ * */
 
 /**
  * Implements methods to deal with diff output.
