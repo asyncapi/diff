@@ -3,7 +3,10 @@ import { breaking, nonBreaking, unclassified } from './constants';
 
 /**
  * @typedef {import('./types').Output} Output
- * @typedef {import('./types').DiffOutputItem} DiffOutputItem
+ * */
+
+/**
+ * @typedef {import('./types').DiffOutput} DiffOutput
  */
 
 /**
