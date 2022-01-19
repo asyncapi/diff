@@ -9,8 +9,9 @@ import { mergeStandard } from './mergeStandard';
  * Generates diff between two AsyncAPI documents
  * @param firstDocument The parsed AsyncAPI document
  * @param secondDocument The parsed AsyncAPI document
- * @param {Object} config Configuration options
- * @param {Object} [config.override] Object to override the standard
+ * @param config Configuration options
+ * @param {object} [config.override] Object to override the standard
+ * @param {string} [config.outputType] The type of output
  * @returns {AsyncAPIDiff} The diff data
  *
  * @example
@@ -22,14 +23,17 @@ import { mergeStandard } from './mergeStandard';
  *      remove: 'breaking',  // when a property has been removed from the AsyncAPI document
  *      edit: 'unclassified' // when a property has been edited in the AsyncAPI document
  *    }
- *  }
+ *  },
+ *  outputType: "yaml"
  * })
  * ```
  */
 export function diff(
   firstDocument: any,
   secondDocument: any,
-  config: Config = {}
+  config: Config = {
+    outputType: 'json', // defaults to json output
+  }
 ): AsyncAPIDiff {
   if (config.override) {
     if (typeof config.override !== 'object') {
@@ -40,5 +44,5 @@ export function diff(
 
   const diffOutput = generateDiff(firstDocument, secondDocument);
   const output = categorizeChanges(standard as OverrideStandard, diffOutput);
-  return new AsyncAPIDiff(JSON.stringify(output));
+  return new AsyncAPIDiff(JSON.stringify(output), config.outputType);
 }

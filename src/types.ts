@@ -28,9 +28,13 @@ export type DiffOutputItem = DiffOutput & {
   type: ChangeType;
 };
 
-export interface Output {
+export type Changes = DiffOutputItem[] | string;
+
+export interface JSONOutput {
   changes: DiffOutputItem[];
 }
+
+export type Output = JSONOutput | string;
 
 export type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
 
@@ -42,6 +46,9 @@ export interface OverrideObject {
 
 export type OverrideStandard = StandardType & OverrideObject;
 
+export type OutputType = 'json' | 'yaml';
+
 export interface Config {
   override?: OverrideObject;
+  outputType: OutputType;
 }
