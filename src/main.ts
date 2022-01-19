@@ -31,9 +31,7 @@ import { mergeStandard } from './mergeStandard';
 export function diff(
   firstDocument: any,
   secondDocument: any,
-  config: Config = {
-    outputType: 'json', // defaults to json output
-  }
+  config: Config = {}
 ): AsyncAPIDiff {
   if (config.override) {
     if (typeof config.override !== 'object') {
@@ -44,5 +42,5 @@ export function diff(
 
   const diffOutput = generateDiff(firstDocument, secondDocument);
   const output = categorizeChanges(standard as OverrideStandard, diffOutput);
-  return new AsyncAPIDiff(JSON.stringify(output), config.outputType);
+  return new AsyncAPIDiff(JSON.stringify(output), config.outputType || 'json');
 }

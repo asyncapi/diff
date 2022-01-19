@@ -50,5 +50,5 @@ export type OutputType = 'json' | 'yaml';
 
 export interface Config {
   override?: OverrideObject;
-  outputType: OutputType;
+  outputType?: OutputType;
 }
