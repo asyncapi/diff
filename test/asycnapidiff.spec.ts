@@ -13,48 +13,64 @@ import {
 
 describe('AsyncAPIDiff wrapper', () => {
   test('checks the instance', () => {
-    expect(new AsyncAPIDiff(JSON.stringify(inputDiff), 'json')).toBeInstanceOf(
-      AsyncAPIDiff
-    );
+    expect(
+      new AsyncAPIDiff(JSON.stringify(inputDiff), { outputType: 'json' })
+    ).toBeInstanceOf(AsyncAPIDiff);
   });
 
   test('JSON: checks the original output', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'json');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'json',
+    });
     expect(diff.getOutput()).toEqual(inputDiff);
   });
 
   test('JSON: returns breaking changes', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'json');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'json',
+    });
     expect(diff.breaking()).toEqual(breakingChanges);
   });
 
   test('JSON: returns non-breaking changes', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'json');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'json',
+    });
     expect(diff.nonBreaking()).toEqual(nonbreakingChanges);
   });
 
   test('JSON: returns unclassified changes', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'json');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'json',
+    });
     expect(diff.unclassified()).toEqual(unclassifiedChanges);
   });
 
   test('YAML: checks the original output', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'yaml');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'yaml',
+    });
     expect(diff.getOutput()).toEqual(YAMLOutputDiff);
   });
 
   test('YAML: returns breaking changes', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'yaml');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'yaml',
+    });
     expect(diff.breaking()).toEqual(YAMLBreakingChanges);
   });
 
   test('YAML: returns non-breaking changes', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'yaml');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'yaml',
+    });
     expect(diff.nonBreaking()).toEqual(YAMLNonbreakingChanges);
   });
 
   test('YAML: returns unclassified changes', () => {
-    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), 'yaml');
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'yaml',
+    });
     expect(diff.unclassified()).toEqual(YAMLUnclassifiedChanges);
   });
 });

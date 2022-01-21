@@ -1,4 +1,4 @@
-import { Output, OutputType, JSONOutput, Changes } from './types';
+import { Output, OutputType, JSONOutput, Changes, AsyncAPIDiffOptions } from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
 import convertToYAML from './helpers/output/convertToYAML';
 
@@ -12,10 +12,10 @@ export default class AsyncAPIDiff {
   private output: JSONOutput;
   private outputType: OutputType;
 
-  constructor(output: string, outputType: OutputType) {
+  constructor(output: string, options: AsyncAPIDiffOptions) {
     // output is a stringified JSON
     this.output = JSON.parse(output);
-    this.outputType = outputType;
+    this.outputType = options.outputType;
   }
 
   /**

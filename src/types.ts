@@ -48,6 +48,10 @@ export type OverrideStandard = StandardType & OverrideObject;
 
 export type OutputType = 'json' | 'yaml';
 
+export interface AsyncAPIDiffOptions {
+  outputType: OutputType;
+}
+
 export interface Config {
   override?: OverrideObject;
   outputType?: OutputType;
