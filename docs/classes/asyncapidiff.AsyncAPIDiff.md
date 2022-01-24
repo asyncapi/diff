@@ -1,8 +1,8 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / [asyncapidiff](../modules/asyncapidiff.md) / default
+[@asyncapi/diff](../README.md) / [Modules](../modules.md) / [asyncapidiff](../modules/asyncapidiff.md) / AsyncAPIDiff
 
-# Class: default
+# Class: AsyncAPIDiff
 
-[asyncapidiff](../modules/asyncapidiff.md).default
+[asyncapidiff](../modules/asyncapidiff.md).AsyncAPIDiff
 
 Implements methods to deal with diff output.
 
@@ -12,24 +12,24 @@ Implements methods to deal with diff output.
 
 ### Constructors
 
-- [constructor](asyncapidiff.default.md#constructor)
+- [constructor](asyncapidiff.AsyncAPIDiff.md#constructor)
 
 ### Properties
 
-- [output](asyncapidiff.default.md#output)
+- [output](asyncapidiff.AsyncAPIDiff.md#output)
 
 ### Methods
 
-- [breaking](asyncapidiff.default.md#breaking)
-- [getOutput](asyncapidiff.default.md#getoutput)
-- [nonBreaking](asyncapidiff.default.md#nonbreaking)
-- [unclassified](asyncapidiff.default.md#unclassified)
+- [breaking](asyncapidiff.AsyncAPIDiff.md#breaking)
+- [getOutput](asyncapidiff.AsyncAPIDiff.md#getoutput)
+- [nonBreaking](asyncapidiff.AsyncAPIDiff.md#nonbreaking)
+- [unclassified](asyncapidiff.AsyncAPIDiff.md#unclassified)
 
 ## Constructors
 
 ### constructor
 
-• **new default**(`output`)
+• **new AsyncAPIDiff**(`output`)
 
 #### Parameters
 
@@ -39,7 +39,7 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:12](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/asyncapidiff.ts#L12)
+[asyncapidiff.ts:12](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L12)
 
 ## Properties
 
@@ -49,7 +49,7 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:10](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/asyncapidiff.ts#L10)
+[asyncapidiff.ts:10](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L10)
 
 ## Methods
 
@@ -65,7 +65,7 @@ All the breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:20](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/asyncapidiff.ts#L20)
+[asyncapidiff.ts:20](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L20)
 
 ___
 
@@ -81,7 +81,7 @@ The JSON output
 
 #### Defined in
 
-[asyncapidiff.ts:41](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/asyncapidiff.ts#L41)
+[asyncapidiff.ts:41](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L41)
 
 ___
 
@@ -97,7 +97,7 @@ All the non-breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:27](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/asyncapidiff.ts#L27)
+[asyncapidiff.ts:27](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L27)
 
 ___
 
@@ -113,4 +113,4 @@ All the unclassified changes
 
 #### Defined in
 
-[asyncapidiff.ts:34](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/asyncapidiff.ts#L34)
+[asyncapidiff.ts:34](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L34)

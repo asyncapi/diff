@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [default](../classes/asyncapidiff.default.md)
+- [AsyncAPIDiff](../classes/asyncapidiff.AsyncAPIDiff.md)

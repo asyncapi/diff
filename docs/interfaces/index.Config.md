@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[types.ts:46](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/types.ts#L46)
+[types.ts:46](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L46)

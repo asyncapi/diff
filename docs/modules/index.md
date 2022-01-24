@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[types.ts:6](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/types.ts#L6)
+[types.ts:6](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L6)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[types.ts:8](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/types.ts#L8)
+[types.ts:8](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L8)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[types.ts:27](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/types.ts#L27)
+[types.ts:27](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L27)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[types.ts:43](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/types.ts#L43)
+[types.ts:43](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L43)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[types.ts:37](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/types.ts#L37)
+[types.ts:37](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L37)
 
 ___
 
@@ -83,13 +83,13 @@ ___
 
 #### Defined in
 
-[types.ts:35](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/types.ts#L35)
+[types.ts:35](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L35)
 
 ## Functions
 
 ### diff
 
-▸ **diff**(`firstDocument`, `secondDocument`, `config?`): [`default`](../classes/asyncapidiff.default.md)
+▸ **diff**(`firstDocument`, `secondDocument`, `config?`): [`AsyncAPIDiff`](../classes/asyncapidiff.AsyncAPIDiff.md)
 
 Generates diff between two AsyncAPI documents
 
@@ -114,10 +114,10 @@ const output = diff(firstDocument, secondDocument, {
 
 #### Returns
 
-[`default`](../classes/asyncapidiff.default.md)
+[`AsyncAPIDiff`](../classes/asyncapidiff.AsyncAPIDiff.md)
 
 The diff data
 
 #### Defined in
 
-[main.ts:27](https://github.com/ron-debajyoti/diff/blob/5fe6a02/src/main.ts#L27)
+[main.ts:27](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/main.ts#L27)
