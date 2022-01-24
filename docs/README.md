@@ -1,3 +1,5 @@
+@asyncapi/diff / [Modules](modules.md)
+
 <h5 align="center">
   <a href="https://www.asyncapi.org"><img src="https://github.com/asyncapi/parser-nodejs/raw/master/assets/logo.png" alt="AsyncAPI logo" width="200"></a>
   <br>

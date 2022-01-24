@@ -1,0 +1,7 @@
+{
+  "entryPoints": ["src/index.ts", "src/asyncapidiff.ts"],
+  "out": "docs",
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ]
+}
