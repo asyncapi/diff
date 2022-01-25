@@ -1,6 +1,12 @@
-import { Output, OutputType, JSONOutput, Changes, AsyncAPIDiffOptions } from './types';
+import {
+  Output,
+  OutputType,
+  JSONOutput,
+  Changes,
+  AsyncAPIDiffOptions,
+} from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
-import convertToYAML from './helpers/output/convertToYAML';
+import toProperFormat from './helpers/output/toProperFormat';
 
 /**
  * Implements methods to deal with diff output.
@@ -26,11 +32,7 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === breaking
     );
 
-    if (this.outputType === 'yaml') {
-      return convertToYAML(breakingChanges);
-    }
-
-    return breakingChanges;
+    return toProperFormat(breakingChanges, this.outputType);
   }
 
   /**
@@ -41,11 +43,7 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === nonBreaking
     );
 
-    if (this.outputType === 'yaml') {
-      return convertToYAML(nonBreakingChanges);
-    }
-
-    return nonBreakingChanges;
+    return toProperFormat(nonBreakingChanges, this.outputType);
   }
 
   /**
@@ -56,20 +54,13 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === unclassified
     );
 
-    if (this.outputType === 'yaml') {
-      return convertToYAML(unclassifiedChanges);
-    }
-
-    return unclassifiedChanges;
+    return toProperFormat(unclassifiedChanges, this.outputType);
   }
 
   /**
    * @returns {Output}  The full output
    */
   getOutput(): Output {
-    if (this.outputType === 'yaml') {
-      return convertToYAML(this.output);
-    }
-    return this.output;
+    return toProperFormat(this.output, this.outputType);
   }
 }
