@@ -1,4 +1,4 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / DiffOutput
+[@asyncapi/diff](../README.md) / [index](../modules/index.md) / DiffOutput
 
 # Interface: DiffOutput
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[types.ts:20](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L20)
+[types.ts:20](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L20)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[types.ts:24](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L24)
+[types.ts:24](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L24)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[types.ts:23](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L23)
+[types.ts:23](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L23)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[types.ts:22](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L22)
+[types.ts:22](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L22)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[types.ts:21](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L21)
+[types.ts:21](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L21)

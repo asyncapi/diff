@@ -1,4 +1,4 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / Output
+[@asyncapi/diff](../README.md) / [index](../modules/index.md) / Output
 
 # Interface: Output
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[types.ts:32](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L32)
+[types.ts:32](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L32)

@@ -1,4 +1,4 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / OverrideObject
+[@asyncapi/diff](../README.md) / [index](../modules/index.md) / OverrideObject
 
 # Interface: OverrideObject
 

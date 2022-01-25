@@ -1,4 +1,4 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / index
+[@asyncapi/diff](../README.md) / index
 
 # Module: index
 
@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[types.ts:6](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L6)
+[types.ts:6](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L6)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[types.ts:8](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L8)
+[types.ts:8](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L8)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[types.ts:27](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L27)
+[types.ts:27](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L27)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[types.ts:43](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L43)
+[types.ts:43](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L43)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[types.ts:37](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L37)
+[types.ts:37](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L37)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[types.ts:35](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L35)
+[types.ts:35](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L35)
 
 ## Functions
 
@@ -122,4 +122,4 @@ The diff data
 
 #### Defined in
 
-[main.ts:29](https://github.com/ron-debajyoti/diff/blob/83bb482/src/main.ts#L29)
+[main.ts:29](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/main.ts#L29)

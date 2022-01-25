@@ -4,5 +4,6 @@
   "plugin": [
     "typedoc-plugin-markdown",
     "typedoc-plugin-rename-defaults"
-  ]
+  ],
+  "readme": "none"
 }

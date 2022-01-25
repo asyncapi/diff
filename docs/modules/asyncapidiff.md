@@ -1,4 +1,4 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / asyncapidiff
+[@asyncapi/diff](../README.md) / asyncapidiff
 
 # Module: asyncapidiff
 

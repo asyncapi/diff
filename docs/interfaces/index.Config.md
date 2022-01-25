@@ -1,4 +1,4 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / Config
+[@asyncapi/diff](../README.md) / [index](../modules/index.md) / Config
 
 # Interface: Config
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[types.ts:46](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L46)
+[types.ts:46](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L46)

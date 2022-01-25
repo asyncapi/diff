@@ -1,4 +1,4 @@
-[@asyncapi/diff](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / Classifier
+[@asyncapi/diff](../README.md) / [index](../modules/index.md) / Classifier
 
 # Interface: Classifier
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[types.ts:14](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L14)
+[types.ts:14](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L14)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types.ts:16](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L16)
+[types.ts:16](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L16)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[types.ts:15](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L15)
+[types.ts:15](https://github.com/ron-debajyoti/diff/blob/1e9eb43/src/types.ts#L15)
