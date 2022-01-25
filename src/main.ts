@@ -14,6 +14,7 @@ import { mergeStandard } from './mergeStandard';
  * @returns {AsyncAPIDiff} The diff data
  *
  * @example
+ * ```
  * const output = diff(firstDocument, secondDocument, {
  *  override: {
  *    '/servers': {
@@ -23,6 +24,7 @@ import { mergeStandard } from './mergeStandard';
  *    }
  *  }
  * })
+ * ```
  */
 export function diff(
   firstDocument: any,

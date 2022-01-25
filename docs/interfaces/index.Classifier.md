@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[types.ts:14](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L14)
+[types.ts:14](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L14)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types.ts:16](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L16)
+[types.ts:16](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L16)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[types.ts:15](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/types.ts#L15)
+[types.ts:15](https://github.com/ron-debajyoti/diff/blob/83bb482/src/types.ts#L15)

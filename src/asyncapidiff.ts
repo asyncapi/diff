@@ -4,7 +4,8 @@ import { breaking, nonBreaking, unclassified } from './constants';
 /**
  * Implements methods to deal with diff output.
  * @class
- * @returns {AsyncAPIDiff}
+ * 
+ * @returns {AsyncAPIDiff} AsynAPIDiff
  */
 export default class AsyncAPIDiff {
   private output: Output;

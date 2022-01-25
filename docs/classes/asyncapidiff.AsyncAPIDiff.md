@@ -6,7 +6,7 @@
 
 Implements methods to deal with diff output.
 
-**`returns`**
+**`returns`** AsynAPIDiff
 
 ## Table of contents
 
@@ -39,7 +39,7 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:12](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L12)
+[asyncapidiff.ts:13](https://github.com/ron-debajyoti/diff/blob/83bb482/src/asyncapidiff.ts#L13)
 
 ## Properties
 
@@ -49,7 +49,7 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:10](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L10)
+[asyncapidiff.ts:11](https://github.com/ron-debajyoti/diff/blob/83bb482/src/asyncapidiff.ts#L11)
 
 ## Methods
 
@@ -65,7 +65,7 @@ All the breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:20](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L20)
+[asyncapidiff.ts:21](https://github.com/ron-debajyoti/diff/blob/83bb482/src/asyncapidiff.ts#L21)
 
 ___
 
@@ -81,7 +81,7 @@ The JSON output
 
 #### Defined in
 
-[asyncapidiff.ts:41](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L41)
+[asyncapidiff.ts:42](https://github.com/ron-debajyoti/diff/blob/83bb482/src/asyncapidiff.ts#L42)
 
 ___
 
@@ -97,7 +97,7 @@ All the non-breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:27](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L27)
+[asyncapidiff.ts:28](https://github.com/ron-debajyoti/diff/blob/83bb482/src/asyncapidiff.ts#L28)
 
 ___
 
@@ -113,4 +113,4 @@ All the unclassified changes
 
 #### Defined in
 
-[asyncapidiff.ts:34](https://github.com/ron-debajyoti/diff/blob/ae7b7f4/src/asyncapidiff.ts#L34)
+[asyncapidiff.ts:35](https://github.com/ron-debajyoti/diff/blob/83bb482/src/asyncapidiff.ts#L35)
