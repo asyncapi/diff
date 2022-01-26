@@ -10,7 +10,7 @@ export default function toProperFormat<T>(
   data: T,
   outputType: OutputType
 ): T | string {
-  if (outputType === 'yaml') {
+  if (outputType === 'yaml' || outputType === 'yml') {
     return convertToYAML(data);
   }
 

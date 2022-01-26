@@ -46,7 +46,7 @@ export interface OverrideObject {
 
 export type OverrideStandard = StandardType & OverrideObject;
 
-export type OutputType = 'json' | 'yaml';
+export type OutputType = 'json' | 'yaml' | 'yml';
 
 export interface AsyncAPIDiffOptions {
   outputType: OutputType;
