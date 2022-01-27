@@ -12,7 +12,7 @@
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
-    "docs": "jsdoc2md lib/index.js -f lib/*.js > API.md",
+    "docs": "typedoc --entryPointStrategy expand --options typedoc.json",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
@@ -59,10 +59,12 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "^0.8.0-125",
     "jest": "^27.0.4",
-    "jsdoc-to-markdown": "^7.0.1",
     "markdown-toc": "^1.2.0",
     "semantic-release": "^17.4.3",
     "ts-jest": "^27.0.3",
+    "typedoc": "^0.22.11",
+    "typedoc-plugin-markdown": "^3.11.12",
+    "typedoc-plugin-rename-defaults": "^0.4.0",
     "typescript": "^4.3.2"
   },
   "publishConfig": {

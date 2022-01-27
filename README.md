@@ -18,7 +18,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Standard object](#standard-object)
-  - [Overriding the standard](#overriding-the-standard)
+  * [Overriding the standard](#overriding-the-standard)
 - [Example](#example)
 - [API](#api)
 - [Develop](#develop)
@@ -37,7 +37,7 @@ npm install @asyncapi/diff
 **NOTE:** The library doesn't have a built-in parser to parse the given AsyncAPI document. Thus, you have to make sure they provide the valid & dereferenced AsyncAPI document as an input. You can use the [AsyncAPI parser](https://github.com/asyncapi/parser-js) to parse and validate the AsyncAPI file first. You can use other tools, but you **must** make sure that the document is valid and dereferenced.
 
 ```js
-import { diff } from '@asyncapi/diff'; // const { diff } = require('@asyncapi/diff');
+import { diff } from "@asyncapi/diff"; // const { diff } = require('@asyncapi/diff');
 
 const output = diff(firstDocument, secondDocument, {
   overrides: {
@@ -70,7 +70,7 @@ The overrides object must be passed in the following format:
 
 ## Example
 
-See the [API](API.md) document to get all the helper methods this library offers.
+See the [index](./docs/modules/index.md) document to get all the helper methods this library offers.
 
 1. Without any overrides
 
@@ -88,10 +88,10 @@ output.unclassified(); // the unclassified changes
 ```js
 const output = diff(firstDocument, secondDocument, {
   overrides: {
-    '/servers/*/protocol': {
-      add: 'non-breaking',
-      remove: 'breaking',
-      edit: 'unclassified',
+    "/servers/*/protocol": {
+      add: "non-breaking",
+      remove: "breaking",
+      edit: "unclassified",
     },
   },
 });
@@ -99,7 +99,7 @@ const output = diff(firstDocument, secondDocument, {
 
 ## API
 
-Checkout the [API](API.md) document to see all the APIs this library offers.
+Checkout the [index](./docs/modules/index.md) document to see all the APIs this library offers.
 
 ## Develop
 

@@ -35,6 +35,7 @@ export interface Output {
 export type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
 
 export type StandardType = typeof standard;
+
 export interface OverrideObject {
   [key: string]: Classifier;
 }
