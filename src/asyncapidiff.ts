@@ -1,5 +1,12 @@
-import { Output, DiffOutputItem } from './types';
+import {
+  Output,
+  OutputType,
+  JSONOutput,
+  Changes,
+  AsyncAPIDiffOptions,
+} from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
+import toProperFormat from './helpers/output/toProperFormat';
 
 /**
  * Implements methods to deal with diff output.
@@ -8,38 +15,52 @@ import { breaking, nonBreaking, unclassified } from './constants';
  * @returns {AsyncAPIDiff} AsynAPIDiff
  */
 export default class AsyncAPIDiff {
-  private output: Output;
+  private output: JSONOutput;
+  private outputType: OutputType;
 
-  constructor(output: string) {
+  constructor(output: string, options: AsyncAPIDiffOptions) {
     // output is a stringified JSON
     this.output = JSON.parse(output);
+    this.outputType = options.outputType;
   }
 
   /**
-   * @returns {Array.<DiffOutputItem>} All the breaking changes
+   * @returns {Changes} All the breaking changes
    */
-  breaking(): DiffOutputItem[] {
-    return this.output.changes.filter((diff) => diff.type === breaking);
+  breaking(): Changes {
+    const breakingChanges = this.output.changes.filter(
+      (diff) => diff.type === breaking
+    );
+
+    return toProperFormat(breakingChanges, this.outputType);
   }
 
   /**
-   * @returns {Array.<DiffOutputItem>} All the non-breaking changes
+   * @returns {Changes} All the non-breaking changes
    */
-  nonBreaking(): DiffOutputItem[] {
-    return this.output.changes.filter((diff) => diff.type === nonBreaking);
+  nonBreaking(): Changes {
+    const nonBreakingChanges = this.output.changes.filter(
+      (diff) => diff.type === nonBreaking
+    );
+
+    return toProperFormat(nonBreakingChanges, this.outputType);
   }
 
   /**
-   * @returns {Array.<DiffOutputItem>} All the unclassified changes
+   * @returns {Changes} All the unclassified changes
    */
-  unclassified(): DiffOutputItem[] {
-    return this.output.changes.filter((diff) => diff.type === unclassified);
+  unclassified(): Changes {
+    const unclassifiedChanges = this.output.changes.filter(
+      (diff) => diff.type === unclassified
+    );
+
+    return toProperFormat(unclassifiedChanges, this.outputType);
   }
 
   /**
-   * @returns {Output}  The JSON output
+   * @returns {Output}  The full output
    */
   getOutput(): Output {
-    return this.output;
+    return toProperFormat(this.output, this.outputType);
   }
 }

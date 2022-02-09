@@ -15,6 +15,7 @@ import {
   specDocument1,
   specDocument2,
   arrayChanges,
+  YAMLArrayChanges,
 } from './fixtures/main.fixtures';
 
 describe('main function', () => {
@@ -64,5 +65,10 @@ describe('main function', () => {
   test('checks output with array changes', () => {
     const output = diff(specDocument1, specDocument2);
     expect(output.getOutput()).toEqual(arrayChanges);
+  });
+
+  test('YAML: checks output with array changes', () => {
+    const output = diff(specDocument1, specDocument2, { outputType: 'yaml' });
+    expect(output.getOutput()).toEqual(YAMLArrayChanges);
   });
 });
