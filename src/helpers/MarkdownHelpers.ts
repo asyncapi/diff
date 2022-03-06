@@ -26,11 +26,11 @@ export function capitaliseFirstLetter(s: string): string {
  * @returns The Markdown list describing the change
  */
 export function generateMarkdownForChange(change: { path: string, any: any }): any {
-  const toAppend: any[] = [`**Path**: ${change.path}`];
+  const toAppend: any[] = [`**Path**: \`${change.path}\``];
   const listItem = {ul: [] as any[]};
 
   for (const [label, value] of Object.entries(change)) {
-    if (label !== 'path') {
+    if (label !== 'path' && label !== 'type') {
       // if the value is an object, display within a dropdown
       if (typeof value === 'object') {
         listItem.ul.push(convertDataToDropdown(capitaliseFirstLetter(label), value));
