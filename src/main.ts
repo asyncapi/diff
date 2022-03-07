@@ -44,5 +44,6 @@ export function diff(
   const output = categorizeChanges(standard as OverrideStandard, diffOutput);
   return new AsyncAPIDiff(JSON.stringify(output), {
     outputType: config.outputType || 'json',
+    markdownSubtype: config.markdownSubtype || 'json'
   });
 }

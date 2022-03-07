@@ -3,7 +3,10 @@
  * @param object The input object
  * @returns The grouped object
  */
-export function groupChangesByType(object: any): { string: [{path: string, any: any}] } {
+import {MarkdownSubtype} from '../types';
+import convertToYAML from './output/convertToYAML';
+
+export function groupChangesByType(object: any): { string: [{ path: string, any: any }] } {
   return object.reduce((objectsByKeyValue: { [x: string]: any; }, obj: { [x: string]: any; }) => {
     const value = obj['type'];
     objectsByKeyValue[value] = (objectsByKeyValue[value] || []).concat(obj);
@@ -23,9 +26,10 @@ export function capitaliseFirstLetter(s: string): string {
 /**
  * Generates the Markdown list items for a single change
  * @param change The object describing the change
+ * @param markdownSubtype the format to display the dropdown data in
  * @returns The Markdown list describing the change
  */
-export function generateMarkdownForChange(change: { path: string, any: any }): any {
+export function generateMarkdownForChange(change: { path: string, any: any }, markdownSubtype: MarkdownSubtype): any {
   const toAppend: any[] = [`**Path**: \`${change.path}\``];
   const listItem = {ul: [] as any[]};
 
@@ -33,7 +37,7 @@ export function generateMarkdownForChange(change: { path: string, any: any }): a
     if (label !== 'path' && label !== 'type') {
       // if the value is an object, display within a dropdown
       if (typeof value === 'object') {
-        listItem.ul.push(convertDataToDropdown(capitaliseFirstLetter(label), value));
+        listItem.ul.push(convertDataToDropdown(capitaliseFirstLetter(label), value, markdownSubtype));
       } else {
         listItem.ul.push(`**${capitaliseFirstLetter(label)}**: ${value}`);
       }
@@ -47,15 +51,18 @@ export function generateMarkdownForChange(change: { path: string, any: any }): a
 /**
  * Converts the label and data to a markdown dropdown
  * @param label The summary / title
- * @param data The JSON data to hide in dropdown
+ * @param data The data to hide in dropdown
+ * @param markdownSubtype the format to display the dropdown data in
  * @returns Markdown string with the label as a summary and the data formatted as JSON code
  */
-export function convertDataToDropdown(label: string, data: {string: any}): string {
+export function convertDataToDropdown(label: string, data: { string: any }, markdownSubtype: MarkdownSubtype): string {
+  const displayData = markdownSubtype === 'json' ? JSON.stringify(data, null, 2) : convertToYAML(data);
+
   return `<details>
     <summary> ${label} </summary>
     
-\`\`\`json
-${JSON.stringify(data, null, 2)}
+\`\`\`${markdownSubtype}
+${displayData}
 \`\`\`            
 </details>  
 `;

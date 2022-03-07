@@ -4,13 +4,15 @@ import {
   generateMarkdownForChange,
   groupChangesByType
 } from '../MarkdownHelpers';
+import {MarkdownSubtype} from '../../types';
 
 /**
  * Converts the diff to Markdown
  * @param object The input object
+ * @param markdownSubtype the format to display the dropdown data in
  * @returns Markdown output
  */
-export default function convertToMarkdown(object: any): string {
+export default function convertToMarkdown(object: any, markdownSubtype: MarkdownSubtype): string {
   if (Object.prototype.hasOwnProperty.call(object, 'changes')) {
     object = object.changes;
   }
@@ -24,7 +26,7 @@ export default function convertToMarkdown(object: any): string {
     const outerList = {ul: [] as any[]};
 
     for (const change of changes) {
-      outerList.ul.push(...generateMarkdownForChange(change));
+      outerList.ul.push(...generateMarkdownForChange(change, markdownSubtype));
     }
 
     markdownStructure.push(outerList);

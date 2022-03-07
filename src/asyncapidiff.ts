@@ -7,6 +7,7 @@ import {
 } from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
 import toProperFormat from './helpers/output/toProperFormat';
+import {MarkdownSubtype} from './types';
 
 /**
  * Implements methods to deal with diff output.
@@ -17,11 +18,13 @@ import toProperFormat from './helpers/output/toProperFormat';
 export default class AsyncAPIDiff {
   private output: JSONOutput;
   private outputType: OutputType;
+  private markdownSubtype: MarkdownSubtype;
 
   constructor(output: string, options: AsyncAPIDiffOptions) {
     // output is a stringified JSON
     this.output = JSON.parse(output);
     this.outputType = options.outputType;
+    this.markdownSubtype = options.markdownSubtype || 'json';
   }
 
   /**
@@ -32,7 +35,7 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === breaking
     );
 
-    return toProperFormat(breakingChanges, this.outputType);
+    return toProperFormat(breakingChanges, this.outputType, this.markdownSubtype);
   }
 
   /**
@@ -43,7 +46,7 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === nonBreaking
     );
 
-    return toProperFormat(nonBreakingChanges, this.outputType);
+    return toProperFormat(nonBreakingChanges, this.outputType, this.markdownSubtype);
   }
 
   /**
@@ -54,13 +57,13 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === unclassified
     );
 
-    return toProperFormat(unclassifiedChanges, this.outputType);
+    return toProperFormat(unclassifiedChanges, this.outputType, this.markdownSubtype);
   }
 
   /**
    * @returns {Output}  The full output
    */
   getOutput(): Output {
-    return toProperFormat(this.output, this.outputType);
+    return toProperFormat(this.output, this.outputType, this.markdownSubtype);
   }
 }

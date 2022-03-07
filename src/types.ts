@@ -48,11 +48,15 @@ export type OverrideStandard = StandardType & OverrideObject;
 
 export type OutputType = 'json' | 'yaml' | 'yml' | 'markdown';
 
+export type MarkdownSubtype = 'json' | 'yaml' | 'yml';
+
 export interface AsyncAPIDiffOptions {
   outputType: OutputType;
+  markdownSubtype?: MarkdownSubtype;
 }
 
 export interface Config {
   override?: OverrideObject;
   outputType?: OutputType;
+  markdownSubtype?: MarkdownSubtype;
 }
