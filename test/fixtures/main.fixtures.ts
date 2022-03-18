@@ -332,3 +332,13 @@ export const YAMLArrayChanges = `changes:
     before: 2
     type: breaking
 `;
+
+export const MarkdownArrayChanges = `## Breaking
+
+
+ - **Path**: \`/servers/google/variables/port/enum/1\`
+     - **Action**: remove
+     - **IsArrayIndex**: true
+     - **Before**: 2
+    
+`;

@@ -9,12 +9,16 @@ import {
   YAMLNonbreakingChanges,
   YAMLOutputDiff,
   YAMLUnclassifiedChanges,
+  MarkdownBreakingChanges,
+  MarkdownNonbreakingChanges,
+  MarkdownOutputDiff,
+  MarkdownUnclassifiedChanges,
 } from './fixtures/asyncapidiff.fixtures';
 
 describe('AsyncAPIDiff wrapper', () => {
   test('checks the instance', () => {
     expect(
-      new AsyncAPIDiff(JSON.stringify(inputDiff), { outputType: 'json' })
+      new AsyncAPIDiff(JSON.stringify(inputDiff), {outputType: 'json'})
     ).toBeInstanceOf(AsyncAPIDiff);
   });
 
@@ -72,5 +76,33 @@ describe('AsyncAPIDiff wrapper', () => {
       outputType: 'yaml',
     });
     expect(diff.unclassified()).toEqual(YAMLUnclassifiedChanges);
+  });
+
+  test('Markdown: returns the original full output', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.getOutput()).toEqual(MarkdownOutputDiff);
+  });
+
+  test('Markdown: returns breaking changes', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.breaking()).toEqual(MarkdownBreakingChanges);
+  });
+
+  test('Markdown: returns non-breaking changes', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.nonBreaking()).toEqual(MarkdownNonbreakingChanges);
+  });
+
+  test('Markdown: returns unclassified changes', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.unclassified()).toEqual(MarkdownUnclassifiedChanges);
   });
 });

@@ -1,7 +1,7 @@
-import { ReplaceOperation, AddOperation } from 'fast-json-patch';
+import {ReplaceOperation, AddOperation} from 'fast-json-patch';
 
-import { standard } from './standard';
-import { breaking, nonBreaking, unclassified } from './constants';
+import {standard} from './standard';
+import {breaking, nonBreaking, unclassified} from './constants';
 
 export type ActionType = 'add' | 'remove' | 'edit';
 

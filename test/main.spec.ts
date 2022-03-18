@@ -1,10 +1,10 @@
-import { parse } from '@asyncapi/parser';
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import {parse} from '@asyncapi/parser';
+import {readFileSync} from 'fs';
+import {resolve} from 'path';
 
 import AsyncAPIDiff from '../src/asyncapidiff';
-import { diff } from '../src/main';
-import { OverrideObject } from '../src/types';
+import {diff} from '../src';
+import {OverrideObject} from '../src';
 
 import {
   diffOutput,
@@ -16,6 +16,7 @@ import {
   specDocument2,
   arrayChanges,
   YAMLArrayChanges,
+  MarkdownArrayChanges
 } from './fixtures/main.fixtures';
 
 describe('main function', () => {
@@ -68,7 +69,12 @@ describe('main function', () => {
   });
 
   test('YAML: checks output with array changes', () => {
-    const output = diff(specDocument1, specDocument2, { outputType: 'yaml' });
+    const output = diff(specDocument1, specDocument2, {outputType: 'yaml'});
     expect(output.getOutput()).toEqual(YAMLArrayChanges);
+  });
+
+  test('Markdown: checks output with array changes', () => {
+    const output = diff(specDocument1, specDocument2, {outputType: 'markdown'});
+    expect(output.getOutput()).toEqual(MarkdownArrayChanges);
   });
 });

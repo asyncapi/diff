@@ -56,3 +56,43 @@ export const YAMLNonbreakingChanges = `- type: non-breaking
 export const YAMLUnclassifiedChanges = `- type: unclassified
   path: /info
 `;
+
+export const MarkdownOutputDiff = `## Breaking
+
+
+ - **Path**: \`/servers\`
+    
+
+## Non-breaking
+
+
+ - **Path**: \`/channels\`
+    
+
+## Unclassified
+
+
+ - **Path**: \`/info\`
+    
+`;
+
+export const MarkdownBreakingChanges = `## Breaking
+
+
+ - **Path**: \`/servers\`
+    
+`;
+
+export const MarkdownNonbreakingChanges = `## Non-breaking
+
+
+ - **Path**: \`/channels\`
+    
+`;
+
+export const MarkdownUnclassifiedChanges = `## Unclassified
+
+
+ - **Path**: \`/info\`
+    
+`;
