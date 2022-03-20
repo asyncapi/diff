@@ -9,6 +9,7 @@ import convertToYAML from './output/convertToYAML';
 export function groupChangesByType(object: any): { string: [{ path: string, any: any }] } {
   return object.reduce((objectsByKeyValue: { [x: string]: any; }, obj: { [x: string]: any; }) => {
     const value = obj['type'];
+    // eslint-disable-next-line security/detect-object-injection
     objectsByKeyValue[value] = (objectsByKeyValue[value] || []).concat(obj);
     return objectsByKeyValue;
   }, {});
