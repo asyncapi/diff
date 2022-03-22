@@ -1,9 +1,6 @@
-<h5 align="center">
-  <a href="https://www.asyncapi.org"><img src="https://github.com/asyncapi/parser-nodejs/raw/master/assets/logo.png" alt="AsyncAPI logo" width="200"></a>
-  <br>
-  Diff
-</h5>
-<p align="center">
+[![AsyncAPI Banner and Logo](/assets/github-repobanner-diff.png)](https://www.asyncapi.com)
+
+<p>
   <em>
   AsyncDiff is a library that compares two AsyncAPI files and provides information about the differences by pointing out explicitly information like breaking changes.
   </em>
@@ -18,7 +15,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Standard object](#standard-object)
-  * [Overriding the standard](#overriding-the-standard)
+  - [Overriding the standard](#overriding-the-standard)
 - [Example](#example)
 - [API](#api)
 - [Develop](#develop)
