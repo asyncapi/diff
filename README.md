@@ -1,10 +1,6 @@
-[![AsyncAPI Banner and Logo](/assets/github-repobanner-diff.png)](https://www.asyncapi.com)
+[![AsyncAPI Banner and Logo](/assets/logo.png)](https://www.asyncapi.com)
 
-<p>
-  <em>
-  AsyncDiff is a library that compares two AsyncAPI files and provides information about the differences by pointing out explicitly information like breaking changes.
-  </em>
-</p>
+AsyncDiff is a library that compares two AsyncAPI files and provides information about the differences by pointing out explicitly information like breaking changes.
 
 ![npm](https://img.shields.io/npm/v/@asyncapi/diff?style=for-the-badge) ![npm](https://img.shields.io/npm/dt/@asyncapi/diff?style=for-the-badge)
 
