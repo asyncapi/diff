@@ -1,4 +1,4 @@
-[![AsyncAPI Banner and Logo](/assets/logo.png)](https://www.asyncapi.com)
+[![AsyncAPI Diff](/assets/logo.png)](https://www.asyncapi.com)
 
 AsyncDiff is a library that compares two AsyncAPI files and provides information about the differences by pointing out explicitly information like breaking changes.
 
