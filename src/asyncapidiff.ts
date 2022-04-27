@@ -13,7 +13,7 @@ import {MarkdownSubtype} from './types';
  * Implements methods to deal with diff output.
  * @class
  * 
- * @returns {AsyncAPIDiff} AsynAPIDiff
+ * @returns {AsyncAPIDiff} AsyncAPIDiff
  */
 export default class AsyncAPIDiff {
   private output: JSONOutput;

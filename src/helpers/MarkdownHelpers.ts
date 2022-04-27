@@ -1,11 +1,11 @@
+import {MarkdownSubtype} from '../types';
+import convertToYAML from './output/convertToYAML';
+
 /**
  * Groups an array of changes by their 'type' property
  * @param object The input object
  * @returns The grouped object
  */
-import {MarkdownSubtype} from '../types';
-import convertToYAML from './output/convertToYAML';
-
 export function groupChangesByType(object: any): { string: [{ path: string, any: any }] } {
   return object.reduce((objectsByKeyValue: { [x: string]: any; }, obj: { [x: string]: any; }) => {
     const value = obj['type'];

@@ -12,11 +12,11 @@ import convertToMarkdown from './convertToMarkdown';
 export default function toProperFormat<T>(
   data: T,
   outputType: OutputType,
-  markdownSubtype: MarkdownSubtype = 'json'
+  markdownSubtype: MarkdownSubtype
 ): T | string {
   if (outputType === 'yaml' || outputType === 'yml') {
     return convertToYAML(data);
-  } else if (outputType === 'markdown') {
+  } else if (outputType === 'markdown' || outputType === 'md') {
     return convertToMarkdown(data, markdownSubtype);
   }
 

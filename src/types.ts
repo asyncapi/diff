@@ -46,7 +46,7 @@ export interface OverrideObject {
 
 export type OverrideStandard = StandardType & OverrideObject;
 
-export type OutputType = 'json' | 'yaml' | 'yml' | 'markdown';
+export type OutputType = 'json' | 'yaml' | 'yml' | 'markdown' | 'md';
 
 export type MarkdownSubtype = 'json' | 'yaml' | 'yml';
 

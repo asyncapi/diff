@@ -13,7 +13,13 @@ import {
   MarkdownNonbreakingChanges,
   MarkdownOutputDiff,
   MarkdownUnclassifiedChanges,
+  MarkdownJSONSubtypeChanges,
+  MarkdownYAMLSubtypeChanges,
 } from './fixtures/asyncapidiff.fixtures';
+
+import {
+  diffOutput
+} from './fixtures/main.fixtures';
 
 describe('AsyncAPIDiff wrapper', () => {
   test('checks the instance', () => {
@@ -104,5 +110,20 @@ describe('AsyncAPIDiff wrapper', () => {
       outputType: 'markdown',
     });
     expect(diff.unclassified()).toEqual(MarkdownUnclassifiedChanges);
+  });
+
+  test('Markdown: returns changes using subtype JSON as the default', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(diffOutput), {
+      outputType: 'markdown',
+    });
+    expect(diff.getOutput()).toEqual(MarkdownJSONSubtypeChanges);
+  });
+
+  test('Markdown: returns changes using subtype YAML', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(diffOutput), {
+      outputType: 'markdown',
+      markdownSubtype: 'yaml',
+    });
+    expect(diff.getOutput()).toEqual(MarkdownYAMLSubtypeChanges);
   });
 });
