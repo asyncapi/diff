@@ -35,7 +35,7 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === breaking
     );
 
-    return toProperFormat(breakingChanges, this.outputType, this.markdownSubtype);
+    return toProperFormat({data: breakingChanges, outputType: this.outputType, markdownSubtype: this.markdownSubtype});
   }
 
   /**
@@ -46,7 +46,7 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === nonBreaking
     );
 
-    return toProperFormat(nonBreakingChanges, this.outputType, this.markdownSubtype);
+    return toProperFormat({data: nonBreakingChanges, outputType: this.outputType, markdownSubtype: this.markdownSubtype});
   }
 
   /**
@@ -57,13 +57,13 @@ export default class AsyncAPIDiff {
       (diff) => diff.type === unclassified
     );
 
-    return toProperFormat(unclassifiedChanges, this.outputType, this.markdownSubtype);
+    return toProperFormat({data: unclassifiedChanges, outputType: this.outputType, markdownSubtype: this.markdownSubtype});
   }
 
   /**
    * @returns {Output}  The full output
    */
   getOutput(): Output {
-    return toProperFormat(this.output, this.outputType, this.markdownSubtype);
+    return toProperFormat({data: this.output, outputType: this.outputType, markdownSubtype: this.markdownSubtype});
   }
 }

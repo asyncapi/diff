@@ -50,6 +50,12 @@ export type OutputType = 'json' | 'yaml' | 'yml' | 'markdown' | 'md';
 
 export type MarkdownSubtype = 'json' | 'yaml' | 'yml';
 
+export interface FormatterConfig<T> {
+  data: T,
+  outputType: OutputType,
+  markdownSubtype: MarkdownSubtype
+}
+
 export interface AsyncAPIDiffOptions {
   outputType: OutputType;
   markdownSubtype?: MarkdownSubtype;
