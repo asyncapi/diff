@@ -26,7 +26,7 @@ export default function convertToMarkdown(object: any, markdownSubtype: Markdown
     const outerList = {ul: [] as any[]};
 
     for (const change of changes) {
-      outerList.ul.push(...generateMarkdownForChange(change, markdownSubtype));
+      outerList.ul.push(...generateMarkdownForChange({change, markdownSubtype}));
     }
 
     markdownStructure.push(outerList);

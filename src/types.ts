@@ -56,6 +56,17 @@ export interface FormatterConfig<T> {
   markdownSubtype: MarkdownSubtype
 }
 
+export interface ChangeMarkdownGenerationConfig {
+  change: { path: string, any: any },
+  markdownSubtype: MarkdownSubtype
+}
+
+export interface MarkdownDropdownGenerationConfig {
+  label: string,
+  data: { string: any },
+  markdownSubtype: MarkdownSubtype
+}
+
 export interface AsyncAPIDiffOptions {
   outputType: OutputType;
   markdownSubtype?: MarkdownSubtype;
