@@ -1,7 +1,7 @@
-import { ReplaceOperation, AddOperation } from 'fast-json-patch';
+import {ReplaceOperation, AddOperation} from 'fast-json-patch';
 
-import { standard } from './standard';
-import { breaking, nonBreaking, unclassified } from './constants';
+import {standard} from './standard';
+import {breaking, nonBreaking, unclassified} from './constants';
 
 export type ActionType = 'add' | 'remove' | 'edit';
 
@@ -46,13 +46,34 @@ export interface OverrideObject {
 
 export type OverrideStandard = StandardType & OverrideObject;
 
-export type OutputType = 'json' | 'yaml' | 'yml';
+export type OutputType = 'json' | 'yaml' | 'yml' | 'markdown' | 'md';
+
+export type MarkdownSubtype = 'json' | 'yaml' | 'yml';
+
+export interface FormatterConfig<T> {
+  data: T,
+  outputType: OutputType,
+  markdownSubtype: MarkdownSubtype
+}
+
+export interface ChangeMarkdownGenerationConfig {
+  change: { path: string, any: any },
+  markdownSubtype: MarkdownSubtype
+}
+
+export interface MarkdownDropdownGenerationConfig {
+  label: string,
+  data: { string: any },
+  markdownSubtype: MarkdownSubtype
+}
 
 export interface AsyncAPIDiffOptions {
   outputType: OutputType;
+  markdownSubtype?: MarkdownSubtype;
 }
 
 export interface Config {
   override?: OverrideObject;
   outputType?: OutputType;
+  markdownSubtype?: MarkdownSubtype;
 }

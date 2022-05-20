@@ -9,12 +9,22 @@ import {
   YAMLNonbreakingChanges,
   YAMLOutputDiff,
   YAMLUnclassifiedChanges,
+  MarkdownBreakingChanges,
+  MarkdownNonbreakingChanges,
+  MarkdownOutputDiff,
+  MarkdownUnclassifiedChanges,
+  MarkdownJSONSubtypeChanges,
+  MarkdownYAMLSubtypeChanges,
 } from './fixtures/asyncapidiff.fixtures';
+
+import {
+  diffOutput
+} from './fixtures/main.fixtures';
 
 describe('AsyncAPIDiff wrapper', () => {
   test('checks the instance', () => {
     expect(
-      new AsyncAPIDiff(JSON.stringify(inputDiff), { outputType: 'json' })
+      new AsyncAPIDiff(JSON.stringify(inputDiff), {outputType: 'json'})
     ).toBeInstanceOf(AsyncAPIDiff);
   });
 
@@ -72,5 +82,48 @@ describe('AsyncAPIDiff wrapper', () => {
       outputType: 'yaml',
     });
     expect(diff.unclassified()).toEqual(YAMLUnclassifiedChanges);
+  });
+
+  test('Markdown: returns the original full output', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.getOutput()).toEqual(MarkdownOutputDiff);
+  });
+
+  test('Markdown: returns breaking changes', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.breaking()).toEqual(MarkdownBreakingChanges);
+  });
+
+  test('Markdown: returns non-breaking changes', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.nonBreaking()).toEqual(MarkdownNonbreakingChanges);
+  });
+
+  test('Markdown: returns unclassified changes', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(inputDiff), {
+      outputType: 'markdown',
+    });
+    expect(diff.unclassified()).toEqual(MarkdownUnclassifiedChanges);
+  });
+
+  test('Markdown: returns changes using subtype JSON as the default', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(diffOutput), {
+      outputType: 'markdown',
+    });
+    expect(diff.getOutput()).toEqual(MarkdownJSONSubtypeChanges);
+  });
+
+  test('Markdown: returns changes using subtype YAML', () => {
+    const diff = new AsyncAPIDiff(JSON.stringify(diffOutput), {
+      outputType: 'markdown',
+      markdownSubtype: 'yaml',
+    });
+    expect(diff.getOutput()).toEqual(MarkdownYAMLSubtypeChanges);
   });
 });
