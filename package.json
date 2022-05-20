@@ -1,6 +1,6 @@
 {
   "name": "@asyncapi/diff",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "AsyncDiff is a library which compares two AsyncAPI Documents and provides information about the differences by pointing out explicitly informations like breaking changes.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

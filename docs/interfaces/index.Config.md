@@ -8,10 +8,21 @@
 
 ### Properties
 
+- [markdownSubtype](index.Config.md#markdownsubtype)
 - [outputType](index.Config.md#outputtype)
 - [override](index.Config.md#override)
 
 ## Properties
+
+### markdownSubtype
+
+• `Optional` **markdownSubtype**: [`MarkdownSubtype`](../modules/index.md#markdownsubtype)
+
+#### Defined in
+
+[types.ts:78](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L78)
+
+___
 
 ### outputType
 
@@ -19,7 +30,7 @@
 
 #### Defined in
 
-[types.ts:57](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L57)
+[types.ts:77](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L77)
 
 ___
 
@@ -29,4 +40,4 @@ ___
 
 #### Defined in
 
-[types.ts:56](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L56)
+[types.ts:76](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L76)

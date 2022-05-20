@@ -6,7 +6,7 @@
 
 Implements methods to deal with diff output.
 
-**`returns`** AsynAPIDiff
+**`returns`** AsyncAPIDiff
 
 ## Table of contents
 
@@ -16,6 +16,7 @@ Implements methods to deal with diff output.
 
 ### Properties
 
+- [markdownSubtype](asyncapidiff.AsyncAPIDiff.md#markdownsubtype)
 - [output](asyncapidiff.AsyncAPIDiff.md#output)
 - [outputType](asyncapidiff.AsyncAPIDiff.md#outputtype)
 
@@ -41,9 +42,19 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:21](https://github.com/asyncapi/diff/blob/756921c/src/asyncapidiff.ts#L21)
+[asyncapidiff.ts:23](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L23)
 
 ## Properties
+
+### markdownSubtype
+
+• `Private` **markdownSubtype**: [`MarkdownSubtype`](../modules/index.md#markdownsubtype)
+
+#### Defined in
+
+[asyncapidiff.ts:21](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L21)
+
+___
 
 ### output
 
@@ -51,7 +62,7 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:18](https://github.com/asyncapi/diff/blob/756921c/src/asyncapidiff.ts#L18)
+[asyncapidiff.ts:19](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L19)
 
 ___
 
@@ -61,7 +72,7 @@ ___
 
 #### Defined in
 
-[asyncapidiff.ts:19](https://github.com/asyncapi/diff/blob/756921c/src/asyncapidiff.ts#L19)
+[asyncapidiff.ts:20](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L20)
 
 ## Methods
 
@@ -77,7 +88,7 @@ All the breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:30](https://github.com/asyncapi/diff/blob/756921c/src/asyncapidiff.ts#L30)
+[asyncapidiff.ts:33](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L33)
 
 ___
 
@@ -93,7 +104,7 @@ The full output
 
 #### Defined in
 
-[asyncapidiff.ts:63](https://github.com/asyncapi/diff/blob/756921c/src/asyncapidiff.ts#L63)
+[asyncapidiff.ts:66](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L66)
 
 ___
 
@@ -109,7 +120,7 @@ All the non-breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:41](https://github.com/asyncapi/diff/blob/756921c/src/asyncapidiff.ts#L41)
+[asyncapidiff.ts:44](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L44)
 
 ___
 
@@ -125,4 +136,4 @@ All the unclassified changes
 
 #### Defined in
 
-[asyncapidiff.ts:52](https://github.com/asyncapi/diff/blob/756921c/src/asyncapidiff.ts#L52)
+[asyncapidiff.ts:55](https://github.com/asyncapi/diff/blob/218aa5e/src/asyncapidiff.ts#L55)
