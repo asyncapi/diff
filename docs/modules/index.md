@@ -7,10 +7,13 @@
 ### Interfaces
 
 - [AsyncAPIDiffOptions](../interfaces/index.AsyncAPIDiffOptions.md)
+- [ChangeMarkdownGenerationConfig](../interfaces/index.ChangeMarkdownGenerationConfig.md)
 - [Classifier](../interfaces/index.Classifier.md)
 - [Config](../interfaces/index.Config.md)
 - [DiffOutput](../interfaces/index.DiffOutput.md)
+- [FormatterConfig](../interfaces/index.FormatterConfig.md)
 - [JSONOutput](../interfaces/index.JSONOutput.md)
+- [MarkdownDropdownGenerationConfig](../interfaces/index.MarkdownDropdownGenerationConfig.md)
 - [OverrideObject](../interfaces/index.OverrideObject.md)
 
 ### Type aliases
@@ -19,6 +22,7 @@
 - [ChangeType](index.md#changetype)
 - [Changes](index.md#changes)
 - [DiffOutputItem](index.md#diffoutputitem)
+- [MarkdownSubtype](index.md#markdownsubtype)
 - [Output](index.md#output)
 - [OutputType](index.md#outputtype)
 - [OverrideStandard](index.md#overridestandard)
@@ -37,7 +41,7 @@
 
 #### Defined in
 
-[types.ts:6](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L6)
+[types.ts:6](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L6)
 
 ___
 
@@ -47,7 +51,7 @@ ___
 
 #### Defined in
 
-[types.ts:8](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L8)
+[types.ts:8](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L8)
 
 ___
 
@@ -57,7 +61,7 @@ ___
 
 #### Defined in
 
-[types.ts:31](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L31)
+[types.ts:31](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L31)
 
 ___
 
@@ -67,7 +71,17 @@ ___
 
 #### Defined in
 
-[types.ts:27](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L27)
+[types.ts:27](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L27)
+
+___
+
+### MarkdownSubtype
+
+Ƭ **MarkdownSubtype**: ``"json"`` \| ``"yaml"`` \| ``"yml"``
+
+#### Defined in
+
+[types.ts:51](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L51)
 
 ___
 
@@ -77,17 +91,17 @@ ___
 
 #### Defined in
 
-[types.ts:37](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L37)
+[types.ts:37](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L37)
 
 ___
 
 ### OutputType
 
-Ƭ **OutputType**: ``"json"`` \| ``"yaml"`` \| ``"yml"``
+Ƭ **OutputType**: ``"json"`` \| ``"yaml"`` \| ``"yml"`` \| ``"markdown"`` \| ``"md"``
 
 #### Defined in
 
-[types.ts:49](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L49)
+[types.ts:49](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L49)
 
 ___
 
@@ -97,7 +111,7 @@ ___
 
 #### Defined in
 
-[types.ts:47](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L47)
+[types.ts:47](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L47)
 
 ___
 
@@ -107,7 +121,7 @@ ___
 
 #### Defined in
 
-[types.ts:41](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L41)
+[types.ts:41](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L41)
 
 ___
 
@@ -117,7 +131,7 @@ ___
 
 #### Defined in
 
-[types.ts:39](https://github.com/asyncapi/diff/blob/756921c/src/types.ts#L39)
+[types.ts:39](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L39)
 
 ## Functions
 
@@ -157,4 +171,4 @@ The diff data
 
 #### Defined in
 
-[main.ts:31](https://github.com/asyncapi/diff/blob/756921c/src/main.ts#L31)
+[main.ts:31](https://github.com/asyncapi/diff/blob/218aa5e/src/main.ts#L31)
