@@ -1,0 +1,95 @@
+{
+  "projectName": "diff",
+  "projectOwner": "aayushmau5",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "aayushmau5",
+      "name": "Aayush Kumar Sahu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54525741?v=4",
+      "profile": "https://aayushsahu.com/",
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance",
+        "ideas",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "derberg",
+      "name": "Lukasz Gornicki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6995927?v=4",
+      "profile": "https://www.brainfart.dev/",
+      "contributions": [
+        "ideas",
+        "review",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "magicmatatjahu",
+      "name": "Maciej Urbańczyk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20404945?v=4",
+      "profile": "https://github.com/magicmatatjahu",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "jonaslagoni",
+      "name": "Jonas Lagoni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13396189?v=4",
+      "profile": "https://github.com/jonaslagoni",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "vinitshahdeo",
+      "name": "Vinit Shahdeo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20594326?v=4",
+      "profile": "https://github.com/vinitshahdeo",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "onbit-uchenik",
+      "name": "Anubhav Vats",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46771418?v=4",
+      "profile": "https://www.linkedin.com/in/anubhav-vats-0688b5187/",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "shivensinha4",
+      "name": "Shiven Sinha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19777714?v=4",
+      "profile": "https://github.com/shivensinha4",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    },
+    {
+      "login": "ron-debajyoti",
+      "name": "Debajyoti Halder",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22571664?v=4",
+      "profile": "https://github.com/ron-debajyoti",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
