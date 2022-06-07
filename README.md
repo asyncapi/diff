@@ -97,7 +97,11 @@ const output = diff(firstDocument, secondDocument, {
 
 ## Output
 
-This library supports JSON(`json`), YAML(`yaml` | `yml`) & Markdown(`markdown` | `md`) output.
+This library supports outputs:
+
+- JSON: `json`
+- YAML: `yaml` or `yml`
+- Markdown: `markdown` or `md`
 
 ```js
 const jsonOutput = diff(firstDocument, secondDocument, {
@@ -113,7 +117,7 @@ const markdownOutput = diff(firstDocument, secondDocument, {
 });
 ```
 
-With markdown output, you can also choose subtypes of the changes as JSON(`json`) or YAML(`yaml` | `yml`).
+With markdown output, you can also choose subtypes of the changes as JSON(`json`) or YAML(`yaml` or `yml`).
 
 ```js
 const markdownOutput = diff(firstDocument, secondDocument, {
