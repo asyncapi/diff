@@ -19,6 +19,11 @@ AsyncDiff is a library that compares two AsyncAPI files and provides information
 
 <!-- tocstop -->
 
+## Features
+
+- Get explicit information about the changes you make to your AsyncAPI files, such as breaking, non-breaking and unclassified changes.
+- Different types of output such as JSON, YAML and Markdown.
+
 ## Installation
 
 ```
@@ -87,6 +92,37 @@ const output = diff(firstDocument, secondDocument, {
       edit: "unclassified",
     },
   },
+});
+```
+
+## Output
+
+This library supports outputs:
+
+- JSON: `json`
+- YAML: `yaml` or `yml`
+- Markdown: `markdown` or `md`
+
+```js
+const jsonOutput = diff(firstDocument, secondDocument, {
+  outputType: "json",
+});
+
+const yamlOutput = diff(firstDocument, secondDocument, {
+  outputType: "yaml" | "yml",
+});
+
+const markdownOutput = diff(firstDocument, secondDocument, {
+  outputType: "markdown" | "md",
+});
+```
+
+With markdown output, you can also choose subtypes of the changes as JSON(`json`) or YAML(`yaml` or `yml`).
+
+```js
+const markdownOutput = diff(firstDocument, secondDocument, {
+  outputType: "markdown" | "md",
+  markdownSubtype: "json" | "yaml" | "yml",
 });
 ```
 
