@@ -4,10 +4,10 @@ import {
   JSONOutput,
   Changes,
   AsyncAPIDiffOptions,
+  MarkdownSubtype,
 } from './types';
 import { breaking, nonBreaking, unclassified } from './constants';
 import toProperFormat from './helpers/output/toProperFormat';
-import {MarkdownSubtype} from './types';
 
 /**
  * Implements methods to deal with diff output.
