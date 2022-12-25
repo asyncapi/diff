@@ -1,6 +1,6 @@
 title: AsyncAPI Diff
 filters:
-    languages:
+    language:
         - TypeScript
     technology:
         - TypeScript
