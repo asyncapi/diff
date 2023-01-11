@@ -8,14 +8,17 @@ AsyncDiff is a library that compares two AsyncAPI files and provides information
 
 <!-- toc -->
 
+- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Standard object](#standard-object)
-  - [Overriding the standard](#overriding-the-standard)
+  * [Overriding the standard](#overriding-the-standard)
 - [Example](#example)
+- [Output](#output)
 - [API](#api)
 - [Develop](#develop)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
 
 <!-- tocstop -->
 

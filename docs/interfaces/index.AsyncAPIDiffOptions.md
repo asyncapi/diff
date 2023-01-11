@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[types.ts:72](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L72)
+[types.ts:72](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L72)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[types.ts:71](https://github.com/asyncapi/diff/blob/218aa5e/src/types.ts#L71)
+[types.ts:71](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L71)
