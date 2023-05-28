@@ -1,4 +1,4 @@
-import { parse } from '@asyncapi/parser';
+import { Parser } from '@asyncapi/parser';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
@@ -10,6 +10,8 @@ import {
   diffLocalOutput,
   diffOutput,
 } from './fixtures/diff.fixtures';
+
+const parser = new Parser();
 
 describe('Diff', () => {
   test('Check if diff is an empty array for same inputs', () => {
@@ -27,9 +29,12 @@ describe('Diff', () => {
       resolve('./test/spec/asyncapi.yml'),
       'utf-8'
     );
-    const firstDocument = await parse(specDocument);
+    const firstDocument = await parser.parse(specDocument);
     expect(
-      generateDiff(firstDocument.json(), firstDocument.json())
+      generateDiff(
+        firstDocument.document?.json(),
+        firstDocument.document?.json()
+      )
     ).toStrictEqual([]);
   });
 
@@ -42,10 +47,13 @@ describe('Diff', () => {
       resolve('./test/spec/diffSpec.yml'),
       'utf-8'
     );
-    const firstDocument = await parse(firstSpecDocument);
-    const secondDocument = await parse(secondSpecDocument);
+    const firstDocument = await parser.parse(firstSpecDocument);
+    const secondDocument = await parser.parse(secondSpecDocument);
     expect(
-      generateDiff(firstDocument.json(), secondDocument.json())
+      generateDiff(
+        firstDocument.document?.json(),
+        secondDocument.document?.json()
+      )
     ).toStrictEqual(diffOutput);
   });
 });
