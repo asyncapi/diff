@@ -119,10 +119,8 @@ export const MarkdownJSONSubtypeChanges = `## Breaking
                 "type": "object",
                 "x-parser-schema-id": "<anonymous-schema-1>"
               },
-              "schemaFormat": "application/vnd.aai.asyncapi;version=2.0.0",
               "x-parser-message-name": "channelMessage",
-              "x-parser-message-parsed": true,
-              "x-parser-original-traits": [
+              "traits": [
                 {
                   "headers": {
                     "properties": {
@@ -173,10 +171,8 @@ export const MarkdownJSONSubtypeChanges = `## Breaking
                 "type": "object",
                 "x-parser-schema-id": "<anonymous-schema-1>"
               },
-              "schemaFormat": "application/vnd.aai.asyncapi;version=2.0.0",
               "x-parser-message-name": "channelMessage",
-              "x-parser-message-parsed": true,
-              "x-parser-original-traits": [
+              "traits": [
                 {
                   "headers": {
                     "properties": {
@@ -219,10 +215,8 @@ export const MarkdownYAMLSubtypeChanges = `## Breaking
                   x-parser-schema-id: <anonymous-schema-2>
               type: object
               x-parser-schema-id: <anonymous-schema-1>
-            schemaFormat: application/vnd.aai.asyncapi;version=2.0.0
             x-parser-message-name: channelMessage
-            x-parser-message-parsed: true
-            x-parser-original-traits:
+            traits:
               - headers:
                   properties:
                     some-common-header:
@@ -261,10 +255,8 @@ export const MarkdownYAMLSubtypeChanges = `## Breaking
                   x-parser-schema-id: <anonymous-schema-2>
               type: object
               x-parser-schema-id: <anonymous-schema-1>
-            schemaFormat: application/vnd.aai.asyncapi;version=2.0.0
             x-parser-message-name: channelMessage
-            x-parser-message-parsed: true
-            x-parser-original-traits:
+            traits:
               - headers:
                   properties:
                     some-common-header:
