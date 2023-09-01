@@ -66,7 +66,7 @@ describe('formatDiffOutput function', () => {
   test('should throw error when firstDocuments is empty', () => {
     expect(() => formatDiffOutput(diffRemove as Operation[], {})).toThrowError(
       // eslint-disable-next-line quotes
-      new TypeError("Cannot read property 'production' of undefined")
+      new TypeError("cannot read properties of undefined (reading 'production')")
     );
   });
 
