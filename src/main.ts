@@ -1,9 +1,10 @@
 import { Config, OverrideStandard } from './types';
 import generateDiff from './generateDiff';
-import { standard } from './standard';
+import { getStandardFromVersion } from './standard';
 import categorizeChanges from './categorizeChanges';
 import AsyncAPIDiff from './asyncapidiff';
 import { mergeStandard } from './mergeStandard';
+import { incompatibleDocuments } from 'helpers/DiffHelpers';
 
 /**
  * Generates diff between two AsyncAPI documents
@@ -33,6 +34,13 @@ export function diff(
   secondDocument: any,
   config: Config = {}
 ): AsyncAPIDiff {
+  if (incompatibleDocuments(firstDocument, secondDocument)) {
+    // TODO: decide how to show the errors
+    return 'Incompatible docs';
+  }
+
+  const standard = getStandardFromVersion(firstDocument);
+
   if (config.override) {
     if (typeof config.override !== 'object') {
       throw new TypeError('Override data must be an object');
@@ -44,6 +52,6 @@ export function diff(
   const output = categorizeChanges(standard as OverrideStandard, diffOutput);
   return new AsyncAPIDiff(JSON.stringify(output), {
     outputType: config.outputType || 'json',
-    markdownSubtype: config.markdownSubtype || 'json'
+    markdownSubtype: config.markdownSubtype || 'json',
   });
 }
