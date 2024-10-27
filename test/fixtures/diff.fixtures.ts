@@ -50,24 +50,22 @@ export const diffOutput = [
             type: 'object',
             'x-parser-schema-id': '<anonymous-schema-1>',
           },
-          schemaFormat: 'application/vnd.aai.asyncapi;version=2.0.0',
-          'x-parser-message-name': 'channelMessage',
-          'x-parser-message-parsed': true,
-          'x-parser-original-traits': [
+          traits: [
             {
               headers: {
                 properties: {
                   'some-common-header': {
                     type: 'string',
-                    'x-parser-schema-id': '<anonymous-schema-7>'
+                    'x-parser-schema-id': '<anonymous-schema-7>',
                   },
                 },
                 type: 'object',
-                'x-parser-schema-id': '<anonymous-schema-6>'
+                'x-parser-schema-id': '<anonymous-schema-6>',
               },
               'x-some-extension': 'some extension',
             },
           ],
+          'x-parser-message-name': 'channelMessage',
           'x-some-extension': 'some extension',
         },
       },
@@ -89,24 +87,22 @@ export const diffOutput = [
             type: 'object',
             'x-parser-schema-id': '<anonymous-schema-1>',
           },
-          schemaFormat: 'application/vnd.aai.asyncapi;version=2.0.0',
-          'x-parser-message-name': 'channelMessage',
-          'x-parser-message-parsed': true,
-          'x-parser-original-traits': [
+          traits: [
             {
               headers: {
                 properties: {
                   'some-common-header': {
                     type: 'string',
-                    'x-parser-schema-id': '<anonymous-schema-7>'
+                    'x-parser-schema-id': '<anonymous-schema-7>',
                   },
                 },
                 type: 'object',
-                'x-parser-schema-id': '<anonymous-schema-6>'
+                'x-parser-schema-id': '<anonymous-schema-6>',
               },
               'x-some-extension': 'some extension',
             },
           ],
+          'x-parser-message-name': 'channelMessage',
           'x-some-extension': 'some extension',
         },
       },
