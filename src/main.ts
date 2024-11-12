@@ -35,8 +35,7 @@ export function diff(
   config: Config = {}
 ): AsyncAPIDiff {
   if (incompatibleDocuments(firstDocument, secondDocument)) {
-    // TODO: decide how to show the errors
-    return 'Incompatible docs';
+    throw new TypeError('Incompatible documents');
   }
 
   const standard = getStandardFromVersion(firstDocument);
