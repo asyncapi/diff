@@ -44,8 +44,8 @@ describe('main function', () => {
   });
 
   test('runs the diff function with empty spec', () => {
-    const firstSpec = {};
-    const secondSpec = {};
+    const firstSpec = {asyncapi: '2.1.0'};
+    const secondSpec = {asyncapi: '2.1.0'};
     expect(diff(firstSpec, secondSpec).getOutput()).toEqual({
       changes: [],
     });

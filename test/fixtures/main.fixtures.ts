@@ -278,6 +278,7 @@ export const changesWithOverrides = {
 };
 
 export const specDocument1 = {
+  asyncapi: '2.1.0',
   servers: {
     google: {
       variables: {
@@ -290,6 +291,7 @@ export const specDocument1 = {
 };
 
 export const specDocument2 = {
+  asyncapi: '2.1.0',
   servers: {
     google: {
       variables: {
