@@ -35,7 +35,7 @@ export function diff(
   config: Config = {}
 ): AsyncAPIDiff {
   if (incompatibleDocuments(firstDocument, secondDocument)) {
-    throw new TypeError('Incompatible documents');
+    throw new TypeError('diff between different AsyncAPI version is not allowed');
   }
 
   const standard = getStandardFromVersion(firstDocument);
