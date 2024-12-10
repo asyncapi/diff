@@ -102,7 +102,7 @@ export function formatDiffOutput(
 
 export function getDocumentMajorVersion(document: any): string {
   const asyncapiVersion: string = document.asyncapi;
-  return asyncapiVersion.split('.')[0] as string;
+  return asyncapiVersion.split('.')[0];
 }
 
 export function incompatibleDocuments(

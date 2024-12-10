@@ -50,7 +50,7 @@ export function diff(
   const diffOutput = generateDiff(firstDocument, secondDocument);
   const output = categorizeChanges(standard as OverrideStandard, diffOutput);
   return new AsyncAPIDiff(JSON.stringify(output), {
-    outputType: config.outputType || 'json',
-    markdownSubtype: config.markdownSubtype || 'json',
+    outputType: config.outputType ?? 'json',
+    markdownSubtype: config.markdownSubtype ?? 'json',
   });
 }
