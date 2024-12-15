@@ -1,6 +1,7 @@
 import {ReplaceOperation, AddOperation} from 'fast-json-patch';
 
-import {standard} from './standard';
+import {standard as v2Standard} from './standards/v2';
+import {standard as v3Standard} from './standards/v3';
 import {breaking, nonBreaking, unclassified} from './constants';
 
 export type ActionType = 'add' | 'remove' | 'edit';
@@ -38,7 +39,7 @@ export type Output = JSONOutput | string;
 
 export type ValueOperation = ReplaceOperation<any> | AddOperation<any>;
 
-export type StandardType = typeof standard;
+export type StandardType = typeof v2Standard | typeof v3Standard;
 
 export interface OverrideObject {
   [key: string]: Classifier;

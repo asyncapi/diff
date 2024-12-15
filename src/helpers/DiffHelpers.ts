@@ -99,3 +99,20 @@ export function formatDiffOutput(
   }
   return output;
 }
+
+export function getDocumentMajorVersion(document: any): string {
+  const asyncapiVersion: string = document.asyncapi;
+  return asyncapiVersion.split('.')[0];
+}
+
+export function incompatibleDocuments(
+  firstDocument: any,
+  secondDocument: any
+): boolean {
+  const firstDocumentMajorVersion = getDocumentMajorVersion(firstDocument);
+  const secondDocumentMajorVersion = getDocumentMajorVersion(secondDocument);
+  if (firstDocumentMajorVersion !== secondDocumentMajorVersion) {
+    return true;
+  }
+  return false;
+}

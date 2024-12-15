@@ -176,6 +176,102 @@ export const diffOutput = {
   ],
 };
 
+export const diffOutputV3 = {
+  changes: [
+    {
+      action: 'edit',
+      after: '1.1',
+      before: '1.0',
+      path: '/components/operations/sendUserSignUp/channel/servers/0/protocolVersion',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: 'rabbitmq.in.mycompany.com:5673',
+      before: 'rabbitmq.in.mycompany.com:5672',
+      path: '/components/operations/sendUserSignUp/channel/servers/0/host',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: 'users.{userid}',
+      before: 'users.{userId}',
+      path: '/components/operations/sendUserSignUp/channel/address',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: '1.1',
+      before: '1.0',
+      path: '/operations/sendUserSignUp/channel/servers/0/protocolVersion',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: 'rabbitmq.in.mycompany.com:5673',
+      before: 'rabbitmq.in.mycompany.com:5672',
+      path: '/operations/sendUserSignUp/channel/servers/0/host',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: 'users.{userid}',
+      before: 'users.{userId}',
+      path: '/operations/sendUserSignUp/channel/address',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: 'A short description',
+      before: 'A longer description',
+      path: '/operations/sendUserSignUp/description',
+      type: 'non-breaking',
+    },
+    {
+      action: 'edit',
+      after: '1.1',
+      before: '1.0',
+      path: '/channels/user/servers/0/protocolVersion',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: 'rabbitmq.in.mycompany.com:5673',
+      before: 'rabbitmq.in.mycompany.com:5672',
+      path: '/channels/user/servers/0/host',
+      type: 'unclassified',
+    },
+    {
+      action: 'edit',
+      after: 'users.{userid}',
+      before: 'users.{userId}',
+      path: '/channels/user/address',
+      type: 'breaking',
+    },
+    {
+      action: 'edit',
+      after: '1.1',
+      before: '1.0',
+      path: '/servers/production/protocolVersion',
+      type: 'breaking',
+    },
+    {
+      action: 'edit',
+      after: 'rabbitmq.in.mycompany.com:5673',
+      before: 'rabbitmq.in.mycompany.com:5672',
+      path: '/servers/production/host',
+      type: 'breaking',
+    },
+    {
+      action: 'edit',
+      after: 'World',
+      before: 'Hello',
+      path: '/info/contact/name',
+      type: 'non-breaking',
+    },
+  ],
+};
+
 export const overrides = {
   '/channels/*': {
     add: 'breaking',
@@ -278,6 +374,7 @@ export const changesWithOverrides = {
 };
 
 export const specDocument1 = {
+  asyncapi: '2.1.0',
   servers: {
     google: {
       variables: {
@@ -290,6 +387,7 @@ export const specDocument1 = {
 };
 
 export const specDocument2 = {
+  asyncapi: '2.1.0',
   servers: {
     google: {
       variables: {
