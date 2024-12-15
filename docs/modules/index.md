@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[types.ts:6](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L6)
+[types.ts:7](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L7)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[types.ts:8](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L8)
+[types.ts:9](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L9)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[types.ts:31](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L31)
+[types.ts:32](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L32)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[types.ts:27](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L27)
+[types.ts:28](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L28)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[types.ts:51](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L51)
+[types.ts:52](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L52)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[types.ts:37](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L37)
+[types.ts:38](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L38)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[types.ts:49](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L49)
+[types.ts:50](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L50)
 
 ___
 
@@ -111,17 +111,17 @@ ___
 
 #### Defined in
 
-[types.ts:47](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L47)
+[types.ts:48](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L48)
 
 ___
 
 ### StandardType
 
-Ƭ **StandardType**: typeof `standard`
+Ƭ **StandardType**: typeof `v2Standard` \| typeof `v3Standard`
 
 #### Defined in
 
-[types.ts:41](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L41)
+[types.ts:42](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L42)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[types.ts:39](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L39)
+[types.ts:40](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L40)
 
 ## Functions
 
@@ -171,4 +171,4 @@ The diff data
 
 #### Defined in
 
-[main.ts:31](https://github.com/asyncapi/diff/blob/867b9b4/src/main.ts#L31)
+[main.ts:32](https://github.com/asyncapi/diff/blob/6fcfb89/src/main.ts#L32)

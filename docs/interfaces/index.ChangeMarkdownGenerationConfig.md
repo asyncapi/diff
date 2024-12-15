@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[types.ts:60](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L60)
+[types.ts:61](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L61)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-[types.ts:61](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L61)
+[types.ts:62](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L62)

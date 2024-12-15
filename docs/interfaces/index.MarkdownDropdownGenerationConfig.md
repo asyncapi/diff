@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[types.ts:66](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L66)
+[types.ts:67](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L67)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[types.ts:65](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L65)
+[types.ts:66](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L66)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[types.ts:67](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L67)
+[types.ts:68](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L68)

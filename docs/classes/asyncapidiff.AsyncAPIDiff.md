@@ -42,7 +42,7 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:23](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L23)
+[asyncapidiff.ts:23](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L23)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Implements methods to deal with diff output.
 
 #### Defined in
 
-[asyncapidiff.ts:21](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L21)
+[asyncapidiff.ts:21](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L21)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[asyncapidiff.ts:19](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L19)
+[asyncapidiff.ts:19](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L19)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[asyncapidiff.ts:20](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L20)
+[asyncapidiff.ts:20](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L20)
 
 ## Methods
 
@@ -88,7 +88,7 @@ All the breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:33](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L33)
+[asyncapidiff.ts:33](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L33)
 
 ___
 
@@ -104,7 +104,7 @@ The full output
 
 #### Defined in
 
-[asyncapidiff.ts:66](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L66)
+[asyncapidiff.ts:66](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L66)
 
 ___
 
@@ -120,7 +120,7 @@ All the non-breaking changes
 
 #### Defined in
 
-[asyncapidiff.ts:44](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L44)
+[asyncapidiff.ts:44](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L44)
 
 ___
 
@@ -136,4 +136,4 @@ All the unclassified changes
 
 #### Defined in
 
-[asyncapidiff.ts:55](https://github.com/asyncapi/diff/blob/867b9b4/src/asyncapidiff.ts#L55)
+[asyncapidiff.ts:55](https://github.com/asyncapi/diff/blob/6fcfb89/src/asyncapidiff.ts#L55)

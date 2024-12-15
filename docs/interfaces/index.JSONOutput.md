@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[types.ts:34](https://github.com/asyncapi/diff/blob/867b9b4/src/types.ts#L34)
+[types.ts:35](https://github.com/asyncapi/diff/blob/6fcfb89/src/types.ts#L35)
