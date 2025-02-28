@@ -41,7 +41,7 @@ npm install @asyncapi/diff
 import { diff } from "@asyncapi/diff"; // const { diff } = require('@asyncapi/diff');
 
 const output = diff(firstDocument, secondDocument, {
-  overrides: {
+  override: {
     // object to override the standard
   },
 });
@@ -88,7 +88,7 @@ output.unclassified(); // the unclassified changes
 
 ```js
 const output = diff(firstDocument, secondDocument, {
-  overrides: {
+  override: {
     "/servers/*/protocol": {
       add: "non-breaking",
       remove: "breaking",
