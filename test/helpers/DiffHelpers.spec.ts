@@ -3,6 +3,7 @@ import { Operation } from 'fast-json-patch';
 import {
   formatAction,
   getBeforeValue,
+  removeCircularReferences,
   setIndex,
   formatDiffOutput,
   getDocumentMajorVersion,
@@ -90,5 +91,40 @@ describe('between different asyncapi version', () => {
 
   test('documents are compatible', () => {
     expect(incompatibleDocuments({asyncapi: '3.0.0'}, {asyncapi: '3.0.0'})).toBeFalsy();
+  });
+});
+
+describe('removeCircularReferences', () => {
+  test('replaces references back to an ancestor and keeps shared ones', () => {
+    const shared = { type: 'string' };
+    const node: any = { a: shared, b: shared };
+    node.items = [node];
+    expect(removeCircularReferences(node)).toStrictEqual({
+      a: { type: 'string' },
+      b: { type: 'string' },
+      items: ['[Circular /]'],
+    });
+  });
+
+  test('names the ancestor, so redirecting a recursive reference is a change', () => {
+    const a: any = {};
+    const b: any = {};
+    a.child = b;
+    b.child = a;
+    const toA = removeCircularReferences(a);
+    b.child = b;
+    expect(toA).toStrictEqual({ child: { child: '[Circular /]' } });
+    expect(removeCircularReferences(a)).toStrictEqual({
+      child: { child: '[Circular /child]' },
+    });
+  });
+
+  test('escapes keys in the JSON pointer', () => {
+    const node: any = {};
+    node['a/b~c'] = { back: node, self: null };
+    node['a/b~c'].self = node['a/b~c'];
+    expect(removeCircularReferences(node)).toStrictEqual({
+      'a/b~c': { back: '[Circular /]', self: '[Circular /a~1b~0c]' },
+    });
   });
 });
