@@ -116,3 +116,47 @@ export function incompatibleDocuments(
   }
   return false;
 }
+
+/**
+ * Copies a document, replacing each reference back to an ancestor (as in a
+ * recursive schema once `$ref`s are resolved) with a marker naming that
+ * ancestor's JSON pointer. Shared, non-recursive references are copied as is.
+ * Naming the ancestor keeps a recursive reference that is redirected elsewhere
+ * visible in the diff.
+ * @param value The document, or a part of it
+ * @param {String} path The JSON pointer of `value`
+ * @param ancestors The objects being copied above `value`, with their pointers
+ * @returns A copy of `value` without circular references
+ *
+ * @private
+ */
+export function removeCircularReferences(
+  value: any,
+  path = '',
+  ancestors = new Map<any, string>()
+): any {
+  if (typeof value !== 'object' || value === null) {
+    return value;
+  }
+  const ancestorPath = ancestors.get(value);
+  if (ancestorPath !== undefined) {
+    return `[Circular ${ancestorPath || '/'}]`;
+  }
+  ancestors.set(value, path);
+  const copy = Array.isArray(value)
+    ? value.map((item, index) =>
+      removeCircularReferences(item, `${path}/${index}`, ancestors)
+    )
+    : Object.fromEntries(
+      Object.entries(value).map(([key, item]) => [
+        key,
+        removeCircularReferences(
+          item,
+          `${path}/${key.replace(/~/g, '~0').replace(/\//g, '~1')}`,
+          ancestors
+        ),
+      ])
+    );
+  ancestors.delete(value);
+  return copy;
+}

@@ -1,6 +1,9 @@
 import { compare } from 'fast-json-patch';
 
-import { formatDiffOutput } from './helpers/DiffHelpers';
+import {
+  formatDiffOutput,
+  removeCircularReferences,
+} from './helpers/DiffHelpers';
 import { DiffOutput } from './types';
 
 /**
@@ -15,6 +18,9 @@ export default function generateDiff(
   firstDocument: any,
   secondDocument: any
 ): DiffOutput[] {
-  const diffOutput = compare(firstDocument, secondDocument);
-  return formatDiffOutput(diffOutput, firstDocument);
+  // resolved `$ref`s make recursive schemas circular, which `compare` can't clone
+  const first = removeCircularReferences(firstDocument);
+  const second = removeCircularReferences(secondDocument);
+  const diffOutput = compare(first, second);
+  return formatDiffOutput(diffOutput, first);
 }

@@ -56,4 +56,30 @@ describe('Diff', () => {
       )
     ).toStrictEqual(diffOutput);
   });
+
+  test('Check diff output with circular references through parser', async () => {
+    const specDocument = readFileSync(
+      resolve('./test/spec/asyncapi-v3-circular.yml'),
+      'utf-8'
+    );
+    const first = await parser.parse(specDocument);
+    const second = await parser.parse(
+      specDocument.replace('type: string', 'type: number')
+    );
+    expect(
+      generateDiff(first.document?.json(), first.document?.json())
+    ).toStrictEqual([]);
+    expect(
+      generateDiff(first.document?.json(), second.document?.json())
+    ).toEqual(
+      expect.arrayContaining([
+        {
+          action: 'edit',
+          path: '/channels/entities/messages/entityCreated/payload/properties/filters/items/anyOf/1/type',
+          before: 'string',
+          after: 'number',
+        },
+      ])
+    );
+  });
 });
